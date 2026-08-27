@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Seo } from "@/components/Seo";
 import { Link } from "wouter";
 import { blogs } from "@/data/blogs";
 import { Clock, ArrowRight, BookOpen } from "lucide-react";
@@ -6,10 +6,11 @@ import { Clock, ArrowRight, BookOpen } from "lucide-react";
 export default function Blog() {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Blog | SpiceFitKitchen</title>
-        <meta name="description" content="Expert guides, nutrition tips, and healthy recipe deep-dives from the SpiceFitKitchen team." />
-      </Helmet>
+      <Seo
+        title="Blog | SpiceFitKitchen"
+        description="Expert guides, nutrition tips, and healthy recipe deep-dives from the SpiceFitKitchen team."
+        path="/blog"
+      />
 
       {/* Header banner */}
       <div className="bg-gradient-to-br from-primary/10 via-background to-orange-50 dark:to-orange-950/20 py-16 px-4">

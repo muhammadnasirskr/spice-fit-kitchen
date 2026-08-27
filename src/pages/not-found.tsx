@@ -1,13 +1,15 @@
 import { Link } from "wouter";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex flex-col items-center justify-center bg-background px-4">
-      <Helmet>
-        <title>404 - Page Not Found | SpiceFitKitchen</title>
-      </Helmet>
+      <Seo
+        title="404 - Page Not Found | SpiceFitKitchen"
+        description="The page you are looking for could not be found."
+        noindex
+      />
       
       <div className="text-center max-w-md">
         <h1 className="text-9xl font-bold font-heading text-primary mb-4">404</h1>

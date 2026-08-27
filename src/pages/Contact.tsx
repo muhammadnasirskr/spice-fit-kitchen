@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Seo } from "@/components/Seo";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -33,9 +33,11 @@ export default function Contact() {
 
   return (
     <div className="container mx-auto px-4 py-16 max-w-5xl">
-      <Helmet>
-        <title>Contact Us | SpiceFitKitchen</title>
-      </Helmet>
+      <Seo
+        title="Contact Us | SpiceFitKitchen"
+        description="Get in touch with the SpiceFitKitchen team — questions, recipe requests, collaborations, or feedback. We reply within 24–48 hours."
+        path="/contact"
+      />
 
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">Get in Touch</h1>

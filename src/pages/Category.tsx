@@ -3,7 +3,7 @@ import { recipes } from "@/data/recipes";
 import { categories } from "@/data/categories";
 import { blogs } from "@/data/blogs";
 import { RecipeGrid } from "@/components/recipes/RecipeGrid";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "@/components/Seo";
 import NotFound from "./not-found";
 import { Clock, BookOpen, ArrowRight } from "lucide-react";
 
@@ -18,9 +18,11 @@ export default function Category() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{category.name} Recipes | SpiceFitKitchen</title>
-      </Helmet>
+      <Seo
+        title={`${category.name} Recipes | SpiceFitKitchen`}
+        description={category.description}
+        path={`/category/${category.slug}`}
+      />
 
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mb-12">

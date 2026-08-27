@@ -45,8 +45,8 @@ export function Hero() {
 
             {/* Subheadline */}
             <p className="text-lg text-gray-300 mb-9 max-w-lg leading-relaxed">
-              Discover healthy South Asian, American, and Fusion recipes crafted
-              by expert chefs — designed for modern families who love great
+              Discover healthy South Asian, American, and Fusion recipes tested
+              in our own kitchen — designed for modern families who love great
               flavor without compromise.
             </p>
 
@@ -61,14 +61,14 @@ export function Hero() {
                 className="h-13 px-9 text-base font-semibold rounded-full bg-white/10 hover:bg-white/20 border-white/30 text-white"
                 asChild
               >
-                <Link href="/about">Get Free eBook</Link>
+                <Link href="/about">Our Story</Link>
               </Button>
             </div>
 
             {/* Newsletter */}
             <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl w-full max-w-md">
               <p className="text-sm font-medium mb-3 text-gray-200">
-                Join 50,000+ readers — get weekly healthy recipes free
+                Get weekly healthy recipes — free, straight to your inbox
               </p>
               <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
                 <Input
@@ -101,7 +101,7 @@ export function Hero() {
                     <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-xs text-gray-400">Trusted by 1M+ home cooks</p>
+                <p className="text-xs text-gray-400">Loved by home cooks who want flavor without the guilt</p>
               </div>
             </div>
           </motion.div>
@@ -146,7 +146,7 @@ export function Hero() {
                 transition={{ delay: 0.7, duration: 0.5 }}
                 className="absolute -left-14 top-12 bg-white dark:bg-card border border-border rounded-2xl shadow-xl px-4 py-3 z-20"
               >
-                <p className="text-2xl font-bold text-primary font-heading">500+</p>
+                <p className="text-2xl font-bold text-primary font-heading">20+</p>
                 <p className="text-xs text-muted-foreground font-medium">Healthy Recipes</p>
               </motion.div>
 
@@ -157,13 +157,8 @@ export function Hero() {
                 transition={{ delay: 0.85, duration: 0.5 }}
                 className="absolute -right-12 bottom-16 bg-white dark:bg-card border border-border rounded-2xl shadow-xl px-4 py-3 z-20"
               >
-                <p className="text-2xl font-bold text-[#F97316] font-heading">4.9</p>
-                <div className="flex gap-0.5 mb-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-xs text-muted-foreground font-medium">Average Rating</p>
+                <p className="text-2xl font-bold text-[#F97316] font-heading">3</p>
+                <p className="text-xs text-muted-foreground font-medium">Cuisines — South Asian, American & Fusion</p>
               </motion.div>
 
               {/* Floating recipe tag — bottom left */}

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Seo } from "@/components/Seo";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -242,13 +242,12 @@ export default function Search() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Search Recipes | SpiceFitKitchen</title>
-        <meta
-          name="description"
-          content="Search and filter 500+ healthy South Asian, American, and Fusion recipes by cook time, calories, dietary tags, and more."
-        />
-      </Helmet>
+      <Seo
+        title="Search Recipes | SpiceFitKitchen"
+        description="Search and filter healthy South Asian, American, and fusion recipes by cook time, calories, and dietary tags."
+        path="/search"
+        noindex
+      />
 
       {/* ── Search Hero ── */}
       <div className="bg-gradient-to-br from-primary/10 via-background to-orange-50 dark:to-orange-950/20 py-14 px-4">

@@ -1,11 +1,13 @@
-import { Helmet } from "react-helmet-async";
+import { Seo } from "@/components/Seo";
 
 export default function About() {
   return (
     <div className="container mx-auto px-4 py-16 max-w-4xl">
-      <Helmet>
-        <title>About Us | SpiceFitKitchen</title>
-      </Helmet>
+      <Seo
+        title="About Us | SpiceFitKitchen"
+        description="Learn about SpiceFitKitchen — our mission to make healthy South Asian, American, and fusion cooking accessible, nutritious, and genuinely delicious."
+        path="/about"
+      />
       
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">About SpiceFitKitchen</h1>
@@ -23,7 +25,7 @@ export default function About() {
         <p>At SpiceFitKitchen, we believe you shouldn't have to choose between your health goals and the foods you grew up loving. Our mission is to make vibrant, spicy, comforting South Asian and fusion meals accessible, nutritious, and absolutely delicious.</p>
         
         <h2>The Story</h2>
-        <p>SpiceFitKitchen started when our founder, a registered dietitian and passionate home cook, realized her clients were abandoning their cultural foods because they thought they were "unhealthy." We set out to prove that with a few smart swaps, proper portioning, and an understanding of macros, any dish can fit into a balanced lifestyle.</p>
+        <p>SpiceFitKitchen started with a simple frustration: so many of us grow up loving the foods of our culture, then feel we have to give them up to eat "healthy." Our founder, a lifelong home cook, refused to accept that trade-off. With a few smart swaps, better portions, and a basic understanding of nutrition, we found that almost any dish can fit into a balanced lifestyle — without losing the flavors that make it worth eating.</p>
         
         <div className="grid md:grid-cols-2 gap-8 my-12 not-prose">
           <div className="bg-primary/10 p-8 rounded-2xl border border-primary/20">
@@ -37,7 +39,7 @@ export default function About() {
         </div>
 
         <h2>Meet the Team</h2>
-        <p>We are a small team of recipe developers, nutritionists, and food photographers dedicated to bringing you the best content possible.</p>
+        <p>We're a small team of home cooks, recipe developers, and food lovers who test, tweak, and photograph the recipes we publish. We're not doctors or dietitians — for advice tailored to your health, we always recommend speaking with a qualified professional — but we are genuinely obsessed with making healthy food that actually tastes good.</p>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { useParams, Link } from "wouter";
 import { recipes } from "@/data/recipes";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "@/components/Seo";
 import { Clock, Users, Flame, ChefHat, Check, Printer, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RecipeCard } from "@/components/recipes/RecipeCard";
@@ -28,9 +28,13 @@ export default function RecipeDetail() {
 
   return (
     <>
-      <Helmet>
-        <title>{recipe.title} | SpiceFitKitchen</title>
-      </Helmet>
+      <Seo
+        title={`${recipe.title} | SpiceFitKitchen`}
+        description={recipe.description}
+        path={`/recipes/${recipe.id}`}
+        image={recipe.image}
+        type="article"
+      />
 
       {/* Hero Image */}
       <div className="w-full h-[50vh] md:h-[60vh] relative">

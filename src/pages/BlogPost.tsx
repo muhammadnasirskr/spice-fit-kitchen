@@ -1,5 +1,5 @@
 import { useParams } from "wouter";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "@/components/Seo";
 import { blogs } from "@/data/blogs";
 import NotFound from "./not-found";
 import { Clock, Calendar, ChefHat } from "lucide-react";
@@ -12,10 +12,13 @@ export default function BlogPost() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>{blog.title} | SpiceFitKitchen</title>
-        <meta name="description" content={blog.excerpt} />
-      </Helmet>
+      <Seo
+        title={`${blog.title} | SpiceFitKitchen`}
+        description={blog.excerpt}
+        path={`/blog/${blog.slug}`}
+        image={blog.image}
+        type="article"
+      />
 
       {/* Hero */}
       <div

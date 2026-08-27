@@ -3,7 +3,7 @@ import { recipes } from "@/data/recipes";
 import { categories } from "@/data/categories";
 import { RecipeGrid } from "@/components/recipes/RecipeGrid";
 import { Button } from "@/components/ui/button";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "@/components/Seo";
 
 export default function Recipes() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
@@ -14,9 +14,11 @@ export default function Recipes() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <Helmet>
-        <title>All Recipes | SpiceFitKitchen</title>
-      </Helmet>
+      <Seo
+        title="All Recipes | SpiceFitKitchen"
+        description="Browse our full collection of healthy South Asian, American, and fusion recipes — filter by category, cook time, and dietary needs."
+        path="/recipes"
+      />
       
       <div className="text-center max-w-3xl mx-auto mb-12">
         <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">Our Recipe Collection</h1>

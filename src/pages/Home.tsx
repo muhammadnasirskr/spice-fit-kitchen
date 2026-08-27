@@ -12,17 +12,18 @@ import { Button } from "@/components/ui/button";
 import { Instagram } from "lucide-react";
 import { Link } from "wouter";
 import { motion } from "framer-motion";
-import { Helmet } from "react-helmet-async";
+import { Seo } from "@/components/Seo";
 
 export default function Home() {
   const latestRecipes = recipes.slice(3, 9);
 
   return (
     <>
-      <Helmet>
-        <title>SpiceFitKitchen | Healthy Flavors. Balanced Living.</title>
-        <meta name="description" content="Discover accessible, flavorful South Asian and fusion cooking without guilt." />
-      </Helmet>
+      <Seo
+        title="SpiceFitKitchen | Healthy Flavors. Balanced Living."
+        description="Discover accessible, flavorful South Asian, American, and fusion recipes with nutrition info and meal plans — healthy cooking without giving up great taste."
+        path="/"
+      />
       
       <Hero />
       <FeaturedRecipes />

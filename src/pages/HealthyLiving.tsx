@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Seo } from "@/components/Seo";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 
@@ -48,10 +48,11 @@ const ARTICLES = [
 export default function HealthyLiving() {
   return (
     <div className="min-h-screen bg-background">
-      <Helmet>
-        <title>Healthy Living | SpiceFitKitchen</title>
-        <meta name="description" content="Articles, tips, and science-backed advice to help you live a balanced, healthy life." />
-      </Helmet>
+      <Seo
+        title="Healthy Living | SpiceFitKitchen"
+        description="Articles, tips, and science-backed advice to help you live a balanced, healthy life."
+        path="/healthy-living"
+      />
 
       {/* Page Header */}
       <div className="bg-gradient-to-br from-primary/10 via-background to-orange-50 dark:to-orange-950/20 py-16 px-4">
