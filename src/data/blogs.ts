@@ -8,6 +8,8 @@ export interface Blog {
   readTime: string;
   image: string;
   heroImage: string;
+  /** Optional pre-designed banner (title already baked in) shown clean at the top, no overlay. */
+  bannerImage?: string;
   excerpt: string;
   content: BlogSection[];
   nutrition?: NutritionRow[];
@@ -301,8 +303,9 @@ export const blogs: Blog[] = [
     recipeCategory: "south-asian",
     date: "August 28, 2026",
     readTime: "9 min read",
-    image: "https://images.unsplash.com/photo-1603894584373-5ac82b6ae398?w=800&auto=format&fit=crop",
-    heroImage: "https://images.unsplash.com/photo-1603894584373-5ac82b6ae398?w=1600&auto=format&fit=crop",
+    image: "/blog/butter-chicken.jpg",
+    heroImage: "/blog/butter-chicken.jpg",
+    bannerImage: "/blog/butter-chicken.jpg",
     excerpt: "A healthy butter chicken recipe made high-protein and low-calorie — no heavy cream needed. Creamy, restaurant-style flavor you can actually fit into your week.",
     quickFacts: [
       { label: "Prep Time", value: "15 minutes" },
@@ -311,11 +314,6 @@ export const blogs: Blog[] = [
       { label: "Protein", value: "~42g", highlight: true },
       { label: "Calories", value: "~360 kcal" },
     ],
-    sidebarImage: {
-      src: "https://images.unsplash.com/photo-1603894584373-5ac82b6ae398?w=600&auto=format&fit=crop",
-      alt: "A bowl of creamy butter chicken with rice",
-      caption: "Spoon it over basmati rice or scoop it up with warm naan — either way, it delivers.",
-    },
     nutrition: [
       { nutrient: "Calories", amount: "~360 kcal" },
       { nutrient: "Protein", amount: "~42g" },
@@ -332,8 +330,8 @@ export const blogs: Blog[] = [
       },
       {
         type: "image",
-        image: "https://images.unsplash.com/photo-1603894584373-5ac82b6ae398?w=900&auto=format&fit=crop",
-        imageAlt: "Creamy healthy butter chicken in a pan garnished with cilantro",
+        image: "/blog/butter-chicken-1.jpg",
+        imageAlt: "Creamy healthy butter chicken garnished with cilantro in a dark bowl with naan",
         imageCaption: "Rich, creamy, and deeply spiced — but built on Greek yogurt instead of a cup of cream.",
       },
       {
@@ -397,9 +395,9 @@ export const blogs: Blog[] = [
       },
       {
         type: "image",
-        image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=900&auto=format&fit=crop",
-        imageAlt: "Spices and tomato base simmering for butter chicken",
-        imageCaption: "The sauce is where the magic happens — let it simmer until it turns a deep brick red.",
+        image: "/blog/butter-chicken-2.jpg",
+        imageAlt: "A bright bowl of healthy butter chicken served with naan on a wooden board",
+        imageCaption: "Spoon it over basmati rice or scoop it up with warm naan — either way, it delivers.",
       },
       {
         type: "heading",

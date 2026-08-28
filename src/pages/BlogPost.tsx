@@ -53,21 +53,34 @@ export default function BlogPost() {
       />
 
       {/* Hero */}
-      <div
-        className="w-full h-72 md:h-[28rem] bg-cover bg-center relative"
-        style={{ backgroundImage: `url(${blog.heroImage})` }}
-      >
-        <div className="absolute inset-0 bg-black/55" />
-        <div className="relative z-10 h-full flex flex-col justify-end container mx-auto px-4 pb-10 max-w-5xl">
-          <span className="inline-block bg-primary text-primary-foreground text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 w-fit">
-            {blog.category}
-          </span>
-          <h1 className="text-3xl md:text-5xl font-bold font-heading text-white leading-tight mb-2">
-            {blog.title}
-          </h1>
-          <p className="text-white/80 text-lg">{blog.subtitle}</p>
+      {blog.bannerImage ? (
+        /* Pre-designed banner (title already in the image) — shown clean, no overlay */
+        <div className="container mx-auto px-4 max-w-5xl pt-6">
+          <img
+            src={blog.bannerImage}
+            alt={blog.title}
+            className="w-full h-auto rounded-2xl shadow-md"
+          />
+          {/* Keep the title as real text for SEO/accessibility even though it is in the image */}
+          <h1 className="sr-only">{blog.title}</h1>
         </div>
-      </div>
+      ) : (
+        <div
+          className="w-full h-72 md:h-[28rem] bg-cover bg-center relative"
+          style={{ backgroundImage: `url(${blog.heroImage})` }}
+        >
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="relative z-10 h-full flex flex-col justify-end container mx-auto px-4 pb-10 max-w-5xl">
+            <span className="inline-block bg-primary text-primary-foreground text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-4 w-fit">
+              {blog.category}
+            </span>
+            <h1 className="text-3xl md:text-5xl font-bold font-heading text-white leading-tight mb-2">
+              {blog.title}
+            </h1>
+            <p className="text-white/80 text-lg">{blog.subtitle}</p>
+          </div>
+        </div>
+      )}
 
       {/* Meta bar */}
       <div className="border-b border-border bg-muted/40">
@@ -105,8 +118,7 @@ export default function BlogPost() {
                         className="w-full h-64 md:h-80 object-cover"
                         loading="lazy"
                         onError={(e) => {
-                          (e.target as HTMLImageElement).src =
-                            "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=900&auto=format&fit=crop";
+                          (e.target as HTMLImageElement).closest("figure")?.remove();
                         }}
                       />
                     </div>
