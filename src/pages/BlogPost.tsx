@@ -1,8 +1,40 @@
-import { useParams } from "wouter";
+import { useParams, Link } from "wouter";
+import type { ReactNode } from "react";
 import { Seo } from "@/components/Seo";
 import { blogs } from "@/data/blogs";
 import NotFound from "./not-found";
 import { Clock, Calendar, ChefHat } from "lucide-react";
+
+/** Turns [label](/path) markdown-style links into clickable internal/external links. */
+function renderText(text?: string): ReactNode {
+  if (!text) return null;
+  const nodes: ReactNode[] = [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let last = 0;
+  let m: RegExpExecArray | null;
+  let k = 0;
+  while ((m = regex.exec(text)) !== null) {
+    if (m.index > last) nodes.push(text.slice(last, m.index));
+    const label = m[1];
+    const url = m[2];
+    if (url.startsWith("/")) {
+      nodes.push(
+        <Link key={k++} href={url} className="text-primary font-medium hover:underline">
+          {label}
+        </Link>
+      );
+    } else {
+      nodes.push(
+        <a key={k++} href={url} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">
+          {label}
+        </a>
+      );
+    }
+    last = m.index + m[0].length;
+  }
+  if (last < text.length) nodes.push(text.slice(last));
+  return nodes;
+}
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
@@ -91,7 +123,7 @@ export default function BlogPost() {
               if (section.type === "intro") {
                 return (
                   <p key={i} className="text-lg text-muted-foreground leading-relaxed border-l-4 border-primary pl-5 italic">
-                    {section.text}
+                    {renderText(section.text)}
                   </p>
                 );
               }
@@ -103,7 +135,7 @@ export default function BlogPost() {
                     {section.heading && (
                       <h3 className="text-base font-bold text-foreground">{section.heading}</h3>
                     )}
-                    <p className="text-muted-foreground leading-relaxed">{section.text}</p>
+                    <p className="text-muted-foreground leading-relaxed">{renderText(section.text)}</p>
                   </div>
                 );
               }
@@ -118,7 +150,7 @@ export default function BlogPost() {
                       </h2>
                     )}
                     {section.text && (
-                      <p className="text-sm text-muted-foreground italic">{section.text}</p>
+                      <p className="text-sm text-muted-foreground italic">{renderText(section.text)}</p>
                     )}
                     <ol className="space-y-3 list-none">
                       {section.items?.map((item, j) => (
@@ -126,7 +158,7 @@ export default function BlogPost() {
                           <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center justify-center mt-0.5">
                             {j + 1}
                           </span>
-                          <span className="text-foreground leading-relaxed pt-1">{item}</span>
+                          <span className="text-foreground leading-relaxed pt-1">{renderText(item)}</span>
                         </li>
                       ))}
                     </ol>
@@ -143,14 +175,14 @@ export default function BlogPost() {
                     </h2>
                   )}
                   {section.text && (
-                    <p className="text-sm text-muted-foreground italic">{section.text}</p>
+                    <p className="text-sm text-muted-foreground italic">{renderText(section.text)}</p>
                   )}
                   {section.items && (
                     <ul className="space-y-2">
                       {section.items.map((item, j) => (
                         <li key={j} className="flex gap-3 items-start text-muted-foreground leading-relaxed">
                           <span className="mt-2 flex-shrink-0 w-2 h-2 rounded-full bg-primary" />
-                          {item}
+                          {renderText(item)}
                         </li>
                       ))}
                     </ul>
@@ -189,36 +221,34 @@ export default function BlogPost() {
             )}
 
             {/* Quick facts */}
-            <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6">
-              <h3 className="text-base font-bold font-heading mb-3 text-foreground">Quick Facts</h3>
-              <div className="space-y-2 text-sm">
-                {[
-                  { label: "Prep Time", value: "5 minutes" },
-                  { label: "Servings", value: "1–2" },
-                  { label: "Difficulty", value: "Easy", className: "text-green-600" },
-                  { label: "Protein", value: "~28g", className: "text-primary" },
-                  { label: "Calories", value: "~380 kcal" },
-                ].map((fact, i) => (
-                  <div key={i} className={`flex justify-between ${i > 0 ? "border-t border-border pt-2" : ""}`}>
-                    <span className="text-muted-foreground">{fact.label}</span>
-                    <span className={`font-medium ${fact.className ?? ""}`}>{fact.value}</span>
-                  </div>
-                ))}
+            {blog.quickFacts && (
+              <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6">
+                <h3 className="text-base font-bold font-heading mb-3 text-foreground">Quick Facts</h3>
+                <div className="space-y-2 text-sm">
+                  {blog.quickFacts.map((fact, i) => (
+                    <div key={i} className={`flex justify-between ${i > 0 ? "border-t border-border pt-2" : ""}`}>
+                      <span className="text-muted-foreground">{fact.label}</span>
+                      <span className={`font-medium ${fact.highlight ? "text-primary" : ""}`}>{fact.value}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
-            {/* Smoothie image in sidebar */}
-            <div className="rounded-2xl overflow-hidden shadow-md">
-              <img
-                src="https://images.unsplash.com/photo-1502741224143-90386d7f8c82?w=600&auto=format&fit=crop"
-                alt="High protein smoothie topped with berries"
-                className="w-full h-52 object-cover"
-                loading="lazy"
-              />
-              <div className="bg-primary/5 border border-primary/20 p-4 text-sm text-muted-foreground text-center italic">
-                Top with fresh berries, granola, or coconut flakes for extra texture.
+            {/* Blog image in sidebar */}
+            {blog.sidebarImage && (
+              <div className="rounded-2xl overflow-hidden shadow-md">
+                <img
+                  src={blog.sidebarImage.src}
+                  alt={blog.sidebarImage.alt}
+                  className="w-full h-52 object-cover"
+                  loading="lazy"
+                />
+                <div className="bg-primary/5 border border-primary/20 p-4 text-sm text-muted-foreground text-center italic">
+                  {blog.sidebarImage.caption}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

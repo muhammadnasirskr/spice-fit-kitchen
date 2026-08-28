@@ -11,6 +11,14 @@ export interface Blog {
   excerpt: string;
   content: BlogSection[];
   nutrition?: NutritionRow[];
+  quickFacts?: QuickFact[];
+  sidebarImage?: { src: string; alt: string; caption: string };
+}
+
+export interface QuickFact {
+  label: string;
+  value: string;
+  highlight?: boolean;
 }
 
 export interface BlogSection {
@@ -40,6 +48,18 @@ export const blogs: Blog[] = [
     image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=800&auto=format&fit=crop",
     heroImage: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1600&auto=format&fit=crop",
     excerpt: "Fuel your mornings with this delicious high protein smoothie. Packed with 28g of protein, it's quick, healthy, and perfect for weight loss or muscle gain.",
+    quickFacts: [
+      { label: "Prep Time", value: "5 minutes" },
+      { label: "Servings", value: "1–2" },
+      { label: "Difficulty", value: "Easy" },
+      { label: "Protein", value: "~28g", highlight: true },
+      { label: "Calories", value: "~380 kcal" },
+    ],
+    sidebarImage: {
+      src: "https://images.unsplash.com/photo-1502741224143-90386d7f8c82?w=600&auto=format&fit=crop",
+      alt: "High protein smoothie topped with berries",
+      caption: "Top with fresh berries, granola, or coconut flakes for extra texture.",
+    },
     nutrition: [
       { nutrient: "Calories", amount: "~380 kcal" },
       { nutrient: "Protein", amount: "~28g" },
@@ -270,6 +290,195 @@ export const blogs: Blog[] = [
         type: "paragraph",
         heading: "Can kids drink this?",
         text: "Yes! For kids, skip the protein powder and reduce or eliminate the chia seeds (or blend them thoroughly). The rest of the recipe is perfectly kid-friendly and a great way to sneak in nutrients like spinach, which blends in completely invisibly.",
+      },
+    ],
+  },
+  {
+    slug: "healthy-butter-chicken",
+    title: "Healthy Butter Chicken (High-Protein, No Heavy Cream)",
+    subtitle: "All the flavor, none of the guilt",
+    category: "South Asian",
+    recipeCategory: "south-asian",
+    date: "August 28, 2026",
+    readTime: "9 min read",
+    image: "https://images.unsplash.com/photo-1603894584373-5ac82b6ae398?w=800&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1603894584373-5ac82b6ae398?w=1600&auto=format&fit=crop",
+    excerpt: "A healthy butter chicken recipe made high-protein and low-calorie — no heavy cream needed. Creamy, restaurant-style flavor you can actually fit into your week.",
+    quickFacts: [
+      { label: "Prep Time", value: "15 minutes" },
+      { label: "Cook Time", value: "25 minutes" },
+      { label: "Servings", value: "4" },
+      { label: "Protein", value: "~42g", highlight: true },
+      { label: "Calories", value: "~360 kcal" },
+    ],
+    sidebarImage: {
+      src: "https://images.unsplash.com/photo-1603894584373-5ac82b6ae398?w=600&auto=format&fit=crop",
+      alt: "A bowl of creamy butter chicken with rice",
+      caption: "Spoon it over basmati rice or scoop it up with warm naan — either way, it delivers.",
+    },
+    nutrition: [
+      { nutrient: "Calories", amount: "~360 kcal" },
+      { nutrient: "Protein", amount: "~42g" },
+      { nutrient: "Carbohydrates", amount: "~14g" },
+      { nutrient: "Fat", amount: "~15g" },
+      { nutrient: "Fiber", amount: "~3g" },
+      { nutrient: "Sugar", amount: "~7g" },
+      { nutrient: "Sodium", amount: "~520mg" },
+    ],
+    content: [
+      {
+        type: "intro",
+        text: "The first time I ordered butter chicken at a little Indian spot in the States, I was hooked before I finished the first bite. That warm, tomatoey, buttery sauce — it tasted like a hug. Then I looked up the numbers. A single takeout serving can run well over 700 calories, most of it from heavy cream and a shocking amount of butter. As someone who grew up eating this food and did not want to give it up, I set out to fix that. After a lot of test batches in my own kitchen, this is the healthy butter chicken I make on repeat: high in protein, no heavy cream, and honestly close enough to the restaurant version that my family cannot tell the difference.",
+      },
+      {
+        type: "image",
+        image: "https://images.unsplash.com/photo-1603894584373-5ac82b6ae398?w=900&auto=format&fit=crop",
+        imageAlt: "Creamy healthy butter chicken in a pan garnished with cilantro",
+        imageCaption: "Rich, creamy, and deeply spiced — but built on Greek yogurt instead of a cup of cream.",
+      },
+      {
+        type: "heading",
+        heading: "Why You'll Make This on Repeat",
+        items: [
+          "It is genuinely high-protein — around 42g per serving — so it keeps you full for hours.",
+          "No heavy cream. The creaminess comes from Greek yogurt and blended cashews, not a carton of cream.",
+          "Weeknight-friendly. From fridge to table in about 40 minutes, most of it hands-off.",
+          "That deep, restaurant-style flavor most healthy versions miss — because we do not skip the spices or the char.",
+          "Naturally gluten-free, and easy to make dairy-light if you need to.",
+          "Great for meal prep — it actually tastes better the next day.",
+        ],
+      },
+      {
+        type: "heading",
+        heading: "The Swaps That Cut the Calories (Not the Flavor)",
+        text: "This is where most healthy butter chicken recipes go wrong. They strip out the fat and end up with a sad, watery curry. Here is how we keep it rich instead:",
+        items: [
+          "Greek yogurt instead of heavy cream: full-fat plain Greek yogurt gives you that tang and body for a fraction of the calories — plus a protein boost. Stir it in off the heat so it does not split.",
+          "A spoon of cashew butter (or a handful of soaked cashews, blended): this is my secret for real creaminess without cream.",
+          "Just one tablespoon of butter: you still get the buttery aroma the dish is named for, without swimming in it.",
+          "Chicken breast or trimmed thighs: breast keeps it leaner and higher in protein; thighs stay juicier. Your call.",
+          "A proper spice base: garam masala, cumin, coriander, turmeric, paprika, and a little kasuri methi (dried fenugreek) do the heavy lifting so you never miss the fat.",
+        ],
+      },
+      {
+        type: "heading",
+        heading: "Ingredients You'll Need",
+        text: "Makes 4 servings.",
+        items: [
+          "1.5 lbs boneless chicken breast or thigh, cut into bite-size pieces",
+          "1/2 cup full-fat plain Greek yogurt (for the marinade) + 1/3 cup more (for the sauce)",
+          "1 tablespoon lemon juice",
+          "1 tablespoon ginger-garlic paste",
+          "2 teaspoons garam masala, divided",
+          "1 teaspoon ground cumin",
+          "1 teaspoon ground coriander",
+          "1 teaspoon turmeric",
+          "1 teaspoon paprika (or Kashmiri chili for color)",
+          "1 can (14 oz) crushed tomatoes, or 4 ripe tomatoes blended",
+          "1 tablespoon cashew butter (or 12 cashews soaked and blended)",
+          "1 tablespoon butter",
+          "1 small onion, finely chopped",
+          "1 teaspoon kasuri methi (dried fenugreek leaves), optional but worth it",
+          "Salt to taste, and fresh cilantro to finish",
+        ],
+      },
+      {
+        type: "numbered",
+        heading: "How to Make It, Step by Step",
+        items: [
+          "Marinate: Toss the chicken with 1/2 cup Greek yogurt, lemon juice, ginger-garlic paste, 1 teaspoon garam masala, and a pinch of salt. Let it sit at least 30 minutes (overnight is even better).",
+          "Get a char: Sear the marinated chicken in a hot pan for 3–4 minutes until the edges brown. You are not cooking it through yet — you want color and smoky flavor. Set it aside.",
+          "Build the base: In the same pan, melt the butter, add the onion, and cook until soft and golden. Add the cumin, coriander, turmeric, paprika, and remaining garam masala; stir for 30 seconds until fragrant.",
+          "Simmer the sauce: Pour in the tomatoes and cashew butter. Simmer 10 minutes until it thickens and deepens in color. For a truly smooth restaurant texture, blend it here, then return it to the pan.",
+          "Finish the chicken: Add the seared chicken back in and simmer 8–10 minutes until cooked through and coated.",
+          "The creamy finish: Turn off the heat. Stir in the remaining Greek yogurt and crushed kasuri methi. Adding the yogurt off the heat is the trick that stops it from curdling.",
+          "Serve: Taste for salt, top with cilantro, and dig in.",
+        ],
+      },
+      {
+        type: "image",
+        image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=900&auto=format&fit=crop",
+        imageAlt: "Spices and tomato base simmering for butter chicken",
+        imageCaption: "The sauce is where the magic happens — let it simmer until it turns a deep brick red.",
+      },
+      {
+        type: "heading",
+        heading: "My Best Tips for Restaurant-Style Flavor",
+        items: [
+          "Do not rush the marinade. Even 30 minutes changes everything, and the yogurt tenderizes the chicken beautifully.",
+          "Bloom your spices in the butter for half a minute before the tomatoes go in — this wakes them up and is the difference between flat and fragrant.",
+          "Blend the sauce for that silky, spoon-coating texture you get at your favorite spot.",
+          "Crush the kasuri methi between your palms before adding it. That single ingredient is what makes people say your butter chicken tastes authentic.",
+          "Always add Greek yogurt off the heat and stir gently to keep it smooth.",
+        ],
+      },
+      {
+        type: "heading",
+        heading: "Common Mistakes to Avoid",
+        items: [
+          "Boiling the yogurt: high heat makes it split and turn grainy. Heat off, stir in, done.",
+          "Skipping the sear: raw chicken dropped straight into sauce misses all that browned, smoky depth.",
+          "Under-salting: this dish needs enough salt to carry the spices — taste and adjust at the end.",
+          "Too much water: if it looks thin, let it simmer uncovered a few more minutes instead of leaving it watery.",
+          "Cheap curry powder as a shortcut: individual spices really do taste better here.",
+        ],
+      },
+      {
+        type: "heading",
+        heading: "What to Serve With Butter Chicken",
+        text: "Round it out with something to soak up that sauce and a lighter side:",
+        items: [
+          "Basmati rice or a warm whole-wheat naan for the full experience.",
+          "A comforting bowl of [Dal Tadka](/recipes/r4) if you want to make it a proper feast.",
+          "For something lighter and lower-carb, our [Quinoa Khichdi](/recipes/r14) is a great swap.",
+          "A crisp cucumber-tomato salad or a spoon of raita to cool things down.",
+          "Craving more paneer on the side? These [Paneer Tikka Skewers](/recipes/r12) are a crowd favorite.",
+        ],
+      },
+      {
+        type: "heading",
+        heading: "Make It a Meal-Prep Win",
+        items: [
+          "Refrigerator: store in an airtight container for up to 4 days. The flavor deepens overnight.",
+          "Freezer: freeze the sauce and chicken (before adding the final yogurt) for up to 2 months.",
+          "Reheat gently on the stove over low heat, adding a splash of water, then stir in a little fresh yogurt to bring back the creaminess.",
+          "Portion it over rice into containers with a side of veggies for grab-and-go lunches all week.",
+        ],
+      },
+      {
+        type: "heading",
+        heading: "Frequently Asked Questions",
+      },
+      {
+        type: "paragraph",
+        heading: "Is butter chicken actually healthy?",
+        text: "Classic restaurant butter chicken usually is not — it leans on heavy cream, lots of butter, and sometimes sugar. This lightened version keeps the flavor but swaps in Greek yogurt and cashews, so you get a high-protein, lower-calorie meal. If you want the exact measured recipe, we have it on our [Lightened Up Butter Chicken](/recipes/r1) page.",
+      },
+      {
+        type: "paragraph",
+        heading: "Can I make it dairy-free?",
+        text: "Yes. Use a thick unsweetened coconut yogurt in place of the Greek yogurt and a plant-based butter. You will lose a little protein but keep the creaminess. The cashews already do a lot of the heavy lifting.",
+      },
+      {
+        type: "paragraph",
+        heading: "Breast or thigh — which is better?",
+        text: "Chicken breast is leaner and pushes the protein higher, which is great if weight loss or muscle gain is your goal. Thighs are more forgiving and stay juicy. Both work; I often do half and half.",
+      },
+      {
+        type: "paragraph",
+        heading: "How do I make it spicier or milder?",
+        text: "For more heat, add a chopped green chili with the onion or a pinch of cayenne. For a kid-friendly, mild version, drop the chili and lean on paprika for color without the burn.",
+      },
+      {
+        type: "heading",
+        heading: "More Healthy Recipes to Try",
+        text: "If you loved this, here is where to go next:",
+        items: [
+          "[Chicken Tikka Salad](/recipes/r18) — a fresh, high-protein way to use up leftovers.",
+          "Browse all our [high-protein recipes](/category/high-protein) for more meals that keep you full.",
+          "Explore the full collection of [South Asian recipes](/category/south-asian), lightened up for everyday eating.",
+          "Planning your week? Check out our [meal plans](/meal-plans) to put it all together.",
+        ],
       },
     ],
   },
