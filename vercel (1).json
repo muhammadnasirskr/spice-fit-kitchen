@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "spice-fit-kitchen.vercel.app" }],
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    }
+  ],
+  "rewrites": [
+    { "source": "/((?!assets/|.*\\.).*)", "destination": "/index.html" }
+  ]
+}
