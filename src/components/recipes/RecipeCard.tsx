@@ -1,28 +1,12 @@
 import { Link } from "wouter";
 import { Recipe } from "@/data/recipes";
-import { Clock, Flame, Star, StarHalf } from "lucide-react";
+import { Clock, Flame, Dumbbell } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const FALLBACK_IMAGE =
   "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&auto=format&fit=crop";
 
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
-  const renderStars = (rating: number) => {
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
-    return (
-      <div className="flex items-center text-secondary">
-        {[...Array(fullStars)].map((_, i) => (
-          <Star key={i} className="w-4 h-4 fill-current" />
-        ))}
-        {hasHalfStar && <StarHalf className="w-4 h-4 fill-current" />}
-        <span className="text-xs text-muted-foreground ml-1">
-          ({recipe.ratingCount})
-        </span>
-      </div>
-    );
-  };
-
   const getDifficultyColor = (diff: string) => {
     switch (diff) {
       case "Easy":
@@ -66,8 +50,9 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
 
         {/* Content */}
         <div className="p-5 flex flex-col flex-1">
-          <div className="flex items-center justify-between mb-2">
-            {renderStars(recipe.rating)}
+          <div className="flex items-center gap-1.5 mb-2 text-primary">
+            <Dumbbell className="w-4 h-4" />
+            <span className="text-xs font-semibold">{recipe.protein}g protein</span>
           </div>
 
           <h3 className="font-heading font-bold text-xl mb-2 line-clamp-2 group-hover:text-primary transition-colors">

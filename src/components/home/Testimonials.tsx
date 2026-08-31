@@ -1,36 +1,35 @@
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { FlaskConical, Scale, Leaf, Timer } from "lucide-react";
 
-const testimonials = [
+const principles = [
   {
     id: 1,
-    name: "Sarah Jenkins",
-    role: "Working Mom",
-    avatar: "https://i.pravatar.cc/150?u=sarah",
-    content: "Finally, healthy recipes that actually taste good! The lightened-up butter chicken is now a weekly staple in our house. Even my picky toddlers love it.",
+    icon: FlaskConical,
+    title: "Tested in Our Own Kitchen",
+    content:
+      "Every recipe is cooked, tweaked and cooked again before it goes up. If a swap makes it taste worse, we do not publish it.",
   },
   {
     id: 2,
-    name: "Rahul Desai",
-    role: "Fitness Enthusiast",
-    avatar: "https://i.pravatar.cc/150?u=rahul",
-    content: "As someone trying to hit protein macros while craving the flavors of home, SpiceFitKitchen is a lifesaver. The high-protein dal recipes are incredible.",
+    icon: Scale,
+    title: "Honest Nutrition Numbers",
+    content:
+      "Calories and macros are estimates based on standard ingredients, and we say so. No inflated protein claims, no rounding in our favour.",
   },
   {
     id: 3,
-    name: "Emily Chen",
-    role: "Home Cook",
-    avatar: "https://i.pravatar.cc/150?u=emily",
-    content: "The meal plans save me so much time. I love how the recipes are genuinely easy to follow, not just 'easy' for professional chefs. Highly recommend!",
+    icon: Leaf,
+    title: "Flavour First, Always",
+    content:
+      "We lighten dishes with Greek yogurt, cashews and proper spice technique — never by stripping out taste and calling it healthy.",
   },
   {
     id: 4,
-    name: "Marcus Johnson",
-    role: "Health Conscious",
-    avatar: "https://i.pravatar.cc/150?u=marcus",
-    content: "I've tried many healthy eating blogs, but the depth of flavor in these fusion recipes is unmatched. The quinoa khichdi changed my perspective on healthy food.",
-  }
+    icon: Timer,
+    title: "Built for Real Weeknights",
+    content:
+      "Most recipes are on the table in under 45 minutes, using ingredients you can find in a regular grocery store.",
+  },
 ];
 
 export function Testimonials() {
@@ -38,38 +37,40 @@ export function Testimonials() {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4 text-foreground">Loved by Home Cooks</h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">See what our community has to say about their SpiceFitKitchen experience.</p>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4 text-foreground">
+            How We Cook
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            A few things we hold ourselves to, so you know what to expect from every recipe here.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={t.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="bg-card border border-border p-6 rounded-2xl flex flex-col"
-            >
-              <div className="flex gap-1 mb-4 text-secondary">
-                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
-              </div>
-              
-              <p className="text-muted-foreground italic mb-6 flex-1">"{t.content}"</p>
-              
-              <div className="flex items-center gap-3 mt-auto">
-                <Avatar>
-                  <AvatarImage src={t.avatar} />
-                  <AvatarFallback>{t.name.charAt(0)}</AvatarFallback>
-                </Avatar>
-                <div>
-                  <div className="font-bold text-sm text-foreground">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
+          {principles.map((p, i) => {
+            const Icon = p.icon;
+            return (
+              <motion.div
+                key={p.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-card border border-border p-6 rounded-2xl flex flex-col"
+              >
+                <div className="w-11 h-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                  <Icon className="w-5 h-5 text-primary" />
                 </div>
-              </div>
-            </motion.div>
-          ))}
+
+                <h3 className="font-heading font-bold text-lg mb-2 text-foreground">
+                  {p.title}
+                </h3>
+
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {p.content}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

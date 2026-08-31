@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Leaf } from "lucide-react";
 
 export function Hero() {
   return (
@@ -80,29 +80,12 @@ export function Hero() {
               </form>
             </div>
 
-            {/* Social proof */}
-            <div className="flex items-center gap-3 mt-8">
-              <div className="flex -space-x-2">
-                {["priya", "david", "anjali", "sarah"].map((name) => (
-                  <img
-                    key={name}
-                    src={`https://i.pravatar.cc/40?u=${name}`}
-                    alt={name}
-                    className="w-9 h-9 rounded-full border-2 border-[#0d1f0d] object-cover"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = "none";
-                    }}
-                  />
-                ))}
-              </div>
-              <div>
-                <div className="flex items-center gap-1 mb-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-xs text-gray-400">Loved by home cooks who want flavor without the guilt</p>
-              </div>
+            {/* Value line */}
+            <div className="flex items-center gap-2 mt-8">
+              <Leaf className="w-4 h-4 text-primary flex-shrink-0" />
+              <p className="text-xs text-gray-400">
+                Every recipe tested in our own kitchen — with honest nutrition numbers.
+              </p>
             </div>
           </motion.div>
 

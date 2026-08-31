@@ -17,7 +17,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // ─── Filter types ────────────────────────────────────────────────────────────
 
-type SortOption = "popular" | "newest" | "calories-asc" | "protein-desc" | "time-asc";
+type SortOption = "newest" | "calories-asc" | "protein-desc" | "time-asc";
 
 interface Filters {
   cookTime: string;     // "", "under15", "15-30", "30-60", "60plus"
@@ -56,7 +56,6 @@ const ALL_TAGS = [
 ];
 
 const SORT_OPTIONS: { label: string; value: SortOption }[] = [
-  { label: "Most Popular", value: "popular" },
   { label: "Newest", value: "newest" },
   { label: "Calories: Low to High", value: "calories-asc" },
   { label: "Protein: High to Low", value: "protein-desc" },
@@ -131,7 +130,7 @@ function PillOption({
 export default function Search() {
   const [query, setQuery] = useState("");
   const [filters, setFilters] = useState<Filters>(EMPTY_FILTERS);
-  const [sort, setSort] = useState<SortOption>("popular");
+  const [sort, setSort] = useState<SortOption>("newest");
   const [showFilters, setShowFilters] = useState(false);
   const [showSortMenu, setShowSortMenu] = useState(false);
 
@@ -197,7 +196,6 @@ export default function Search() {
     }
 
     // Sort
-    if (sort === "popular") out.sort((a, b) => b.ratingCount - a.ratingCount);
     if (sort === "newest") out.sort((a, b) => b.publishedDate.localeCompare(a.publishedDate));
     if (sort === "calories-asc") out.sort((a, b) => a.calories - b.calories);
     if (sort === "protein-desc") out.sort((a, b) => b.protein - a.protein);
