@@ -1,21 +1,27 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "spice-fit-kitchen.vercel.app" }],
-      "destination": "https://spicefitkitchen.com/:path*",
-      "permanent": true
-    }
-  ],
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": "spice-fit-kitchen.vercel.app" }],
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex" }]
+      "has": [
+        {
+          "type": "host",
+          "value": "spice-fit-kitchen.vercel.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ],
   "rewrites": [
-    { "source": "/((?!assets/|.*\\.).*)", "destination": "/index.html" }
+    {
+      "source": "/((?!assets/|.*\\.).*)",
+      "destination": "/index.html"
+    }
   ]
 }

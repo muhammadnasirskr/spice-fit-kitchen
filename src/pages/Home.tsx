@@ -20,8 +20,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="SpiceFitKitchen | Healthy Flavors. Balanced Living."
-        description="Discover accessible, flavorful South Asian, American, and fusion recipes with nutrition info and meal plans — healthy cooking without giving up great taste."
+        title="SpiceFitKitchen | Healthy South Asian, American & Fusion Recipes"
+        description="SpiceFitKitchen brings you healthy South Asian, American, and fusion recipes with easy steps, nutrition info, and meal plans — flavorful cooking for a balanced, modern lifestyle."
         path="/"
       />
       
