@@ -1217,6 +1217,163 @@ export const blogs: Blog[] = [
       },
     ],
   },
+  {
+    slug: "healthy-breakfast-ideas-under-400-calories",
+    title: "8 Healthy Breakfast Ideas Under 400 Calories (Ready in 25 Minutes or Less)",
+    subtitle: "Real morning food, with the protein numbers printed honestly",
+    category: "Healthy Living",
+    recipeCategory: "breakfast",
+    date: "September 2, 2026",
+    readTime: "10 min read",
+    image: "/blog/healthy-breakfast-ideas.jpg",
+    heroImage: "/blog/healthy-breakfast-ideas.jpg",
+    bannerImage: "/blog/healthy-breakfast-ideas.jpg",
+    excerpt: "Eight healthy breakfast ideas under 400 calories, from a 175-calorie egg white bhurji to 28g-protein overnight oats — with the real protein number on every one, and an honest note about which are actually filling.",
+    quickFacts: [
+      { label: "Breakfasts", value: "8" },
+      { label: "Calorie range", value: "175 – 380 kcal" },
+      { label: "Protein range", value: "8g – 28g", highlight: true },
+      { label: "Ready in 15 min or less", value: "6 of 8" },
+      { label: "Make the night before", value: "3 of 8" },
+    ],
+    content: [
+      {
+        type: "intro",
+        text: "I skipped breakfast for most of my twenties and told myself it was intermittent fasting. It was not. It was that I had never found anything I could actually make at 7:10am that was worth eating. So I would leave the house on coffee, eat something regrettable at eleven, and then be starving and irritable by two. What eventually fixed it was not willpower and it was not a smoothie phase. It was accepting that a weekday breakfast has to survive a specific test: can I make it while half awake, does it cost me under about twenty minutes, and will it still be holding me up at noon. These eight pass that test. They run from 175 to 380 calories, six of them are ready in fifteen minutes or less, and all of them already have a full recipe on this site.",
+      },
+      {
+        type: "paragraph",
+        heading: "The thing nobody counts at breakfast",
+        text: "Before the list, the honest bit. Every calorie number here is the food as written — it does not include what you drink with it. A large latte is 150 to 250 calories. A coffee with two sugars and whole milk is around 100. That is not an argument for drinking black coffee if you hate black coffee; it is just the number that quietly breaks people's breakfast maths, far more often than the food does. The same goes for toppings: a sliced banana is about 105 calories and a generous handful of granola is around 120. Add both to a 240-calorie chia pudding and you have a 465-calorie breakfast. Still fine. Just not the number on the label.",
+      },
+      {
+        type: "heading",
+        heading: "How I Picked These Eight",
+        items: [
+          "Under 400 calories per serving as written.",
+          "Twenty-five minutes or less of actual morning work — most are under fifteen.",
+          "The protein number is printed on every single one, including the ones where it is low. That is the whole point of the list.",
+          "A real mix: four are South Asian or fusion, four are the yogurt-and-oats kind. Weekday breakfast should not require picking a side.",
+          "Every one has a full recipe on this site, so nothing here is a photo with a vague idea attached.",
+        ],
+      },
+      {
+        type: "image",
+        image: "/blog/healthy-breakfast-ideas-1.jpg",
+        imageAlt: "Make-ahead breakfasts on a wooden table — chia pudding with mango, a yogurt and granola parfait, overnight oats and a bowl of porridge",
+        imageCaption: "Six of these eight are done in under fifteen minutes. Three of them are done before you even go to bed.",
+      },
+      {
+        type: "heading",
+        heading: "Made the Night Before",
+        text: "Five minutes of work tonight, zero minutes tomorrow. These are the two that changed my mornings the most.",
+      },
+      {
+        type: "paragraph",
+        heading: "1. High-Protein Overnight Oats — 370 cal, 28g protein",
+        text: "The highest-protein breakfast on this list, and it takes five minutes with a jar and a spoon. Oats, Greek yogurt, almond milk, a scoop of vanilla protein powder and a spoon of almond butter — mixed, covered, and left in the fridge for at least six hours. One honest note: our recipe page lists this as 5 minutes, which is the active time, not the waiting. Make it tonight or it will not be ready tomorrow. Batch five jars on Sunday and the whole week is handled. [Get the recipe](/recipes/r20).",
+      },
+      {
+        type: "paragraph",
+        heading: "2. Chia Seed Pudding — 240 cal, 8g protein",
+        text: "Chia seeds, almond milk, vanilla, a little maple syrup, then four hours or overnight in the fridge until it sets. Mango and toasted coconut on top in the morning. Same warning as above: the 5 minutes is the mixing, not the setting. At 8g of protein this is on the light side, and the fix is in the recipe's own notes — a scoop of collagen or protein powder stirred in at the start takes it past 20g without changing the texture. [Get the recipe](/recipes/r11).",
+      },
+      {
+        type: "heading",
+        heading: "Ten Minutes or Less in the Morning",
+        text: "For the mornings you did not plan ahead, which is most of them.",
+      },
+      {
+        type: "paragraph",
+        heading: "3. High-Protein Breakfast Smoothie — 380 cal, 28g protein",
+        text: "Greek yogurt, frozen banana, protein powder, peanut butter, oats and berries in a blender. It ties the overnight oats for the most protein here and it is the fastest thing on the list from standing start to eating. It is also the highest in calories at 380, mostly from the peanut butter and the oats — which is exactly why it actually keeps you full rather than leaving you hungry at ten. [Read the full guide](/blog/high-protein-smoothie-breakfast).",
+      },
+      {
+        type: "paragraph",
+        heading: "4. Greek Yogurt Berry Parfait — 290 cal, 20g protein",
+        text: "Yogurt, berries, a little low-sugar granola, a drizzle of honey, layered in a glass. No cooking at all. Twenty grams of protein for 290 calories is a genuinely good ratio, and the granola is the only thing to watch — a heavy hand there can add 150 calories without you noticing. Layer it in a jar the night before and it becomes a grab-and-go. [Get the recipe](/recipes/r7).",
+      },
+      {
+        type: "heading",
+        heading: "Worth Standing at the Stove For",
+        text: "Fifteen to twenty-five minutes, and these are the ones I look forward to.",
+      },
+      {
+        type: "paragraph",
+        heading: "5. Savory Masala Oats — 220 cal, 8g protein",
+        text: "If sweet breakfast has never worked for you, this is the answer. Cumin seeds bloomed in a little oil, vegetables softened with turmeric, then oats and water cooked down until absorbed. It tastes like upma, not like porridge. The protein is low at 8g — the recipe's own tip is the right fix: a handful of roasted peanuts on top adds both crunch and about 7g more. [Get the recipe](/recipes/r3).",
+      },
+      {
+        type: "paragraph",
+        heading: "6. Avocado Roti Toast — 310 cal, 9g protein",
+        text: "Avocado toast, except the bread is a toasted whole wheat roti and the seasoning is chaat masala and pomegranate seeds. I was sceptical and then I made it three days running. It is the best-looking thing on this list by a distance, which matters more on a slow Sunday than a Tuesday. Nine grams of protein is thin, so put a fried egg on it — that is roughly 6g more and it belongs there anyway. [Get the recipe](/recipes/r13).",
+      },
+      {
+        type: "paragraph",
+        heading: "7. Egg White Masala Bhurji — 175 cal, 22g protein",
+        text: "The best number on this whole page: 175 calories carrying 22g of protein, in twenty minutes. Onion and cumin softened, tomatoes and green chilli cooked down, then six egg whites scrambled through it gently. If you are eating for weight loss and you want one breakfast that does the most work for the fewest calories, this is it. It also shows up on our [12 high-protein Indian dinners](/blog/high-protein-indian-dinners-under-400-calories) list, because in most South Asian homes bhurji is not a breakfast-only dish. [Get the recipe](/recipes/r10).",
+      },
+      {
+        type: "paragraph",
+        heading: "8. Oat Idli — 210 cal, 9g protein",
+        text: "Idli without the two-day fermentation: powdered oats, semolina and yogurt rested for five minutes, eno stirred in right before steaming, done in fifteen minutes of steaming. This is the most involved thing on the list at twenty-five minutes total, and it is also the one most worth making a double batch of. Eat it with sambar rather than plain — the dal in sambar is where the missing protein comes from. [Get the recipe](/recipes/r17).",
+      },
+      {
+        type: "image",
+        image: "/blog/healthy-breakfast-ideas-2.jpg",
+        imageAlt: "Masala egg bhurji with onion, tomato and coriander, served with rotis and a cup of chai on a home kitchen table",
+        imageCaption: "Bhurji, a roti and chai. Made with egg whites it comes in at 175 calories and 22 grams of protein — nothing else on this list comes close on that ratio.",
+      },
+      {
+        type: "heading",
+        heading: "The Protein Problem With Most Healthy Breakfasts",
+        text: "Four of these eight are genuinely high in protein. Four are not, and I would rather say which than let the word healthy do the work.",
+        items: [
+          "The strong four: overnight oats (28g), smoothie (28g), bhurji (22g), parfait (20g). Any of these will hold you until lunch on their own.",
+          "The light four: chia pudding (8g), masala oats (8g), avocado roti toast (9g), oat idli (9g). These taste great and they are genuinely nutritious — they are just not going to keep you full for four hours by themselves.",
+          "This matters more at breakfast than at any other meal, because a low-protein breakfast is what makes you eat badly at eleven. The morning is where the rest of the day gets decided.",
+          "Every one of the light four has a cheap fix already in its recipe notes: peanuts on the oats, an egg on the roti toast, protein powder or collagen in the chia, sambar with the idli. None of them add more than about 100 calories.",
+          "If you want the protein without the arithmetic, start with the [high-protein recipes](/category/high-protein) collection and work backwards.",
+        ],
+      },
+      {
+        type: "numbered",
+        heading: "Three Things That Actually Fixed My Mornings",
+        text: "None of these are recipes. They are the reasons the recipes finally stuck.",
+        items: [
+          "Do the five minutes the night before. Overnight oats, chia pudding and a layered parfait all take about the same effort as brushing your teeth, and they remove the decision entirely. A breakfast you do not have to decide on is a breakfast you actually eat.",
+          "Pick two, not eight. I rotated between exactly two breakfasts for months and it worked far better than trying to cook something different every day. Variety is a weekend project; weekdays want a default.",
+          "Count the coffee once. Not forever — just work out what your usual morning drink actually costs you, one time. For a lot of people it is more calories than the food, and knowing the number is enough to change what you order.",
+        ],
+      },
+      {
+        type: "paragraph",
+        heading: "Which one should I start with?",
+        text: "If you want to lose weight, the [Egg White Masala Bhurji](/recipes/r10) — no other breakfast here gives you 22g of protein for 175 calories. If your mornings are genuinely chaotic, the [overnight oats](/recipes/r20), because the work happens when you have time. If you have never enjoyed a healthy breakfast, the [Savory Masala Oats](/recipes/r3), because it is savoury and warm and does not taste like a diet.",
+      },
+      {
+        type: "paragraph",
+        heading: "Can I meal-prep a week of these?",
+        text: "Three of them, properly: overnight oats and chia pudding batch into five jars on a Sunday, and parfaits can be layered the night before. The cooked ones — bhurji, masala oats, avocado roti toast — are morning-of dishes and do not reheat well. Oat idli is the exception in the middle: steam a double batch and it keeps two days, warmed through. If you want a whole week mapped out rather than assembled from a list, our [meal plans](/meal-plans) cover breakfast too.",
+      },
+      {
+        type: "paragraph",
+        heading: "Is a 200-calorie breakfast too small?",
+        text: "For some people, yes, and I would rather you knew that than quietly under-ate. A 175-calorie bhurji is brilliant if you are managing your intake and eating a real lunch. It is not enough if you train in the morning or you have a physically demanding job. The honest way to use this list is to treat the calorie number as information, not a target — the protein number is the one that predicts whether you will make it to lunch.",
+      },
+      {
+        type: "heading",
+        heading: "Where to Go From Here",
+        items: [
+          "[Breakfast recipes](/category/breakfast) — the full breakfast collection on the site.",
+          "[High-protein recipes](/category/high-protein) — everything tagged for protein, across every meal.",
+          "[Diabetic-friendly recipes](/category/diabetic-friendly) — lower-glycemic options, several of which are on this list.",
+          "[12 High-Protein Indian Dinners Under 400 Calories](/blog/high-protein-indian-dinners-under-400-calories) — the dinner half of this idea.",
+          "[Weekly meal plans](/meal-plans) — breakfast through dinner, planned rather than picked.",
+        ],
+      },
+    ],
+  },
 ];
 
 /**
