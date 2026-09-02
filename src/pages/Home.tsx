@@ -7,7 +7,7 @@ import { CookingTips } from "@/components/home/CookingTips";
 import { NewsletterSection } from "@/components/home/NewsletterSection";
 import { Testimonials } from "@/components/home/Testimonials";
 import { recipes } from "@/data/recipes";
-import { blogs } from "@/data/blogs";
+import { blogsNewestFirst } from "@/data/blogs";
 import { RecipeCard } from "@/components/recipes/RecipeCard";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
@@ -114,7 +114,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {blogs.slice(0, 3).map((blog) => (
+            {blogsNewestFirst.slice(0, 3).map((blog) => (
               <Link key={blog.slug} href={`/blog/${blog.slug}`}>
                 <article className="group cursor-pointer bg-card border border-border rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
                   <div className="aspect-[16/9] overflow-hidden bg-muted">

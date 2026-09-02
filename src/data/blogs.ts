@@ -1050,4 +1050,186 @@ export const blogs: Blog[] = [
       },
     ],
   },
+  {
+    slug: "high-protein-indian-dinners-under-400-calories",
+    title: "12 High-Protein Indian Dinners Under 400 Calories",
+    subtitle: "Real numbers, real recipes, no rice math hidden from you",
+    category: "High Protein",
+    recipeCategory: "high-protein",
+    date: "September 1, 2026",
+    readTime: "10 min read",
+    image: "/blog/high-protein-indian-dinners.jpg",
+    heroImage: "/blog/high-protein-indian-dinners.jpg",
+    bannerImage: "/blog/high-protein-indian-dinners.jpg",
+    excerpt: "Twelve high-protein Indian and Indian-inspired dinners, every one under 400 calories per serving, with the real protein number next to each dish — from 42g butter chicken to a 175-calorie egg white bhurji.",
+    quickFacts: [
+      { label: "Dinners", value: "12" },
+      { label: "Calorie range", value: "175 – 390 kcal" },
+      { label: "Protein range", value: "13g – 42g", highlight: true },
+      { label: "Vegetarian", value: "7 of 12" },
+      { label: "Ready in 30 min or less", value: "4 of 12" },
+    ],
+    content: [
+      {
+        type: "intro",
+        text: "For about two years my weeknight rotation was three dishes deep and I was bored out of my mind. I had quietly decided that eating Indian food and eating light were two separate projects — that a real curry meant accepting a 700-calorie plate, and that anything under 400 meant plain grilled chicken and steamed broccoli again. That turned out to be wrong, and what proved it was a kitchen scale and a very boring spreadsheet. I weighed the oil. I weighed the cream. And in almost every dish I loved, the calories were not coming from the spices, the vegetables, or even the meat. They were coming from three or four tablespoons of fat and a mountain of white rice nobody was really tasting. These twelve dinners are what came out of that. Every one is Indian or Indian-inspired, every one is under 400 calories a serving, and every one already lives on this site with a full recipe.",
+      },
+      {
+        type: "paragraph",
+        heading: "First, an honest word about that 400-calorie number",
+        text: "Every calorie figure on this page is for the dish itself — the curry, the skewers, the bowl of dal. It does not include rice or roti. I am saying that up front because a lot of roundups quietly do not, and then you cook one of these, add a cup of basmati, and wonder why the arithmetic never works out. A cup of cooked white rice is roughly 200 calories; a medium roti is about 120. So a 320-calorie curry with a full cup of rice is really a 520-calorie dinner — which is still a perfectly good dinner, it is just not the number in the headline. My own fix was to halve the rice and let the curry do the work. Do the maths that fits your day, not mine.",
+      },
+      {
+        type: "heading",
+        heading: "How I Picked These Twelve",
+        items: [
+          "Under 400 calories per serving as written — no asterisks about using half the sauce.",
+          "At least 13g of protein, with the actual number printed next to every dish so you can judge it yourself instead of trusting the word high.",
+          "Indian or Indian-inspired. A few are openly fusion — tacos, a salad — but the spice base is the same.",
+          "Genuinely dinner-able. One or two are filed under breakfast or snacks on this site, which says more about our category labels than about when anyone actually eats them.",
+          "Already published here with a full recipe, so every link goes somewhere real rather than to a photo with no instructions.",
+        ],
+      },
+      {
+        type: "image",
+        image: "/blog/high-protein-indian-dinners-1.jpg",
+        imageAlt: "Overhead spread of Indian dinner dishes — dal, curry, paneer tikka skewers, saag, salad, rice and raita",
+        imageCaption: "Nothing on this list asks you to give up the sauce. It just asks you to measure the fat that goes into it.",
+      },
+      {
+        type: "heading",
+        heading: "The 12 Dinners, Ranked by Protein",
+        text: "Highest protein first. Calories are per serving, dish only.",
+      },
+      {
+        type: "paragraph",
+        heading: "1. Healthy Butter Chicken — 360 cal, 42g protein",
+        text: "The dish everyone assumes is off the table. It is not. Heavy cream does far less flavour work than the toasted spices and the tomato base, and swapping it for yogurt plus a spoonful of cashew paste gets you 42g of protein for 360 calories — the highest protein number on this entire list. [Read the full guide](/blog/healthy-butter-chicken), or if you only want the steps, the [Lightened Up Butter Chicken recipe page](/recipes/r1) has it in five.",
+      },
+      {
+        type: "paragraph",
+        heading: "2. Chicken Tikka Salad — 390 cal, 40g protein",
+        text: "Tikka-spiced chicken strips over romaine and cucumber with a yogurt-mint dressing. At 390 calories it is the heaviest thing here, but it is also nearly the highest in protein, which is a trade I will take every time. It packs well, which is why it has become my most-repeated work lunch as much as a dinner. [Get the recipe](/recipes/r18).",
+      },
+      {
+        type: "paragraph",
+        heading: "3. Healthy Chicken Tikka Masala — 340 cal, 40g protein",
+        text: "Restaurant tikka masala regularly runs past 600 calories a serving, almost all of it cream and ghee. This version keeps the char on the chicken and the depth in the sauce and lands at 340. The step you cannot skip is charring the chicken separately before it meets the sauce — that is where the restaurant flavour actually lives, not in the cream. [Read the full guide](/blog/healthy-chicken-tikka-masala).",
+      },
+      {
+        type: "paragraph",
+        heading: "4. Air Fryer Tandoori Chicken — 250 cal, 35g protein",
+        text: "If you own an air fryer, this is the best protein-per-calorie dish on the list and the cook time is fifteen minutes. No tandoor, no grill, no overnight marinade. I make a double batch on Sunday and it turns into three different dinners across the week — over salad, in a wrap, or just with dal. [Read the full guide](/blog/air-fryer-tandoori-chicken).",
+      },
+      {
+        type: "paragraph",
+        heading: "5. Turkey Keema Tacos — 370 cal, 32g protein",
+        text: "Keema made with ground turkey is already one of the leanest things in the Indian repertoire, and putting it in corn tortillas with pico de gallo instead of over rice cuts the carb load without removing anything you would miss. This is the dish my family asks for without knowing it is the healthy one. [Get the recipe](/recipes/r8).",
+      },
+      {
+        type: "paragraph",
+        heading: "6. Egg White Masala Bhurji — 175 cal, 22g protein",
+        text: "175 calories. Twenty-two grams of protein. Twenty minutes. It is the lightest dinner on this list by some distance, and it is filed under breakfast on this site — which I think says more about our category labels than about when anyone eats bhurji. In most South Asian homes this is a Tuesday dinner with a roti. If you eat late and do not want to go to bed heavy, start here. [Get the recipe](/recipes/r10).",
+      },
+      {
+        type: "paragraph",
+        heading: "7. Light Saag Paneer — 340 cal, 19g protein",
+        text: "The trick here is not less paneer, it is less cream. The spinach is blanched and blended into a puree that does the thickening on its own, so the whole pan needs about one tablespoon of cream instead of a quarter cup. Nineteen grams of protein from a vegetarian curry is respectable. [Get the recipe](/recipes/r16).",
+      },
+      {
+        type: "paragraph",
+        heading: "8. Paneer Tikka Skewers — 300 cal, 18g protein",
+        text: "Filed under snacks, eaten as dinner, at least in my house. The bell peppers go on the skewer with the paneer, so a plate of these plus a squeeze of lemon is already a complete meal at around 300 calories. Paneer is one of very few vegetarian proteins that holds its shape under a broiler instead of collapsing. [Get the recipe](/recipes/r12).",
+      },
+      {
+        type: "paragraph",
+        heading: "9. Dal Tadka — 280 cal, 16g protein",
+        text: "The dish I would defend against anything else on this list. 280 calories, 16g of protein, built almost entirely from things already in the cupboard, and better on day two than day one. Do not skip the tadka — pouring that sizzling cumin, garlic and chilli over the top at the end is not a garnish, it is half the flavour of the dish. Use oil instead of ghee and it is fully vegan. [Get the recipe](/recipes/r4).",
+      },
+      {
+        type: "paragraph",
+        heading: "10. Chana Masala — 310 cal, 15g protein",
+        text: "Two cans of chickpeas, an onion, a can of tomatoes. The protein is moderate, but the fibre is the real story: 13g a serving, roughly half a day's worth, and that is why it keeps you full far longer than the protein number alone suggests. [Read the full guide](/blog/chana-masala-chickpea-curry).",
+      },
+      {
+        type: "paragraph",
+        heading: "11. Quinoa Khichdi — 320 cal, 14g protein",
+        text: "Khichdi built on quinoa and moong dal instead of rice, which nudges the protein up and gives you a complete amino acid profile without turning it into a different dish. This is what I cook when I have eaten badly for two days and want something that feels like a reset rather than a punishment. [Get the recipe](/recipes/r14).",
+      },
+      {
+        type: "paragraph",
+        heading: "12. Moong Dal Soup — 195 cal, 13g protein",
+        text: "The lightest of the curries and soups here, with ginger and turmeric doing most of the work. On its own it is closer to a starter than a dinner — but with a couple of the [paneer tikka skewers](/recipes/r12) alongside, you get a 495-calorie plate carrying 31g of protein, and that is a properly good dinner. [Get the recipe](/recipes/r9).",
+      },
+      {
+        type: "image",
+        image: "/blog/high-protein-indian-dinners-2.jpg",
+        imageAlt: "A steaming bowl of dal tadka with rotis and a small cucumber salad on a home kitchen table",
+        imageCaption: "Dal, roti and a bit of salad. This is what most of these dinners actually look like on a Tuesday night — not a styled restaurant plate.",
+      },
+      {
+        type: "heading",
+        heading: "Let's Be Honest About the Vegetarian Ones",
+        text: "Seven of the twelve are vegetarian. Three are vegan as written, and dal tadka joins them if you use oil instead of ghee.",
+        items: [
+          "The plant-based dishes here run 13–16g of protein per serving. That is decent. It is not high. The chicken dishes give you two to three times as much, and no amount of confident blog writing changes that.",
+          "The honest fix is a side, not a bigger portion. A cup of plain Greek yogurt adds around 10g and belongs on the plate anyway.",
+          "Quinoa instead of rice adds roughly 8g across a serving — that is exactly why the [Quinoa Khichdi](/recipes/r14) ranks where it does rather than lower.",
+          "Combining two light dishes beats doubling one heavy one: the moong dal and paneer skewer pairing above is the pattern to copy.",
+          "If protein is your main goal and you eat meat, dishes 1 to 5 will get you there far more easily. I would rather say that plainly than inflate the numbers to make a list look balanced.",
+        ],
+      },
+      {
+        type: "numbered",
+        heading: "Three Rules That Made All of This Possible",
+        text: "None of these are recipe tricks. They are the three habits that changed every dish I cook.",
+        items: [
+          "Measure the oil — once. Not forever, just for a week. Most of us free-pour two or three tablespoons where one would do, and that alone is 200 or more calories added to a dish you would have enjoyed just as much.",
+          "Swap cream for yogurt or blended cashews, and add it off the heat. Off the heat is the entire trick. Yogurt splits when it boils, which is why so many people try this swap once, get a grainy sauce, and conclude it does not work.",
+          "Halve the rice before you touch the curry. A 320-calorie curry becomes a 520-calorie dinner the moment a full cup of rice lands beside it — and the rice is almost never the part you were craving.",
+        ],
+      },
+      {
+        type: "paragraph",
+        heading: "Can I meal-prep these?",
+        text: "Most of them, yes. The dals, the chana masala and the keema all genuinely improve on day two, and they reheat without turning sad. The salad and anything with charred paneer are better made fresh. If you would rather have the week planned for you than pick from a list, our [weekly meal plans](/meal-plans) do exactly that job.",
+      },
+      {
+        type: "paragraph",
+        heading: "Are these actually authentic?",
+        text: "Some are, some are not, and I would rather be clear about which. Dal tadka, bhurji and chana masala are made the way they are made. The butter chicken and tikka masala are deliberately lightened versions of restaurant dishes, not home dishes. The tacos and the salad are frankly fusion and make no claim otherwise. All of them taste like themselves; only some of them would pass at my grandmother's table.",
+      },
+      {
+        type: "paragraph",
+        heading: "What if I'm cooking for one?",
+        text: "Do not halve anything. Cook the full batch of the dals and curries and eat them across three days — they are all better reheated, and cooking one portion of dal takes exactly as long as cooking four. The dishes worth making fresh in a single serving are the bhurji, which takes twenty minutes anyway, and the salad.",
+      },
+      {
+        type: "heading",
+        heading: "Where to Go From Here",
+        items: [
+          "[High-protein recipes](/category/high-protein) — everything on the site tagged for protein, in one place.",
+          "[South Asian recipes](/category/south-asian) — the full cuisine collection, lighter versions included.",
+          "[Weight loss recipes](/category/weight-loss) — filtered for lower-calorie dishes that still taste like something.",
+          "[Dinner recipes](/category/dinner) — if you want to browse by meal time instead of by goal.",
+          "[Weekly meal plans](/meal-plans) — for when you would rather not decide at 6pm on a Tuesday.",
+        ],
+      },
+    ],
+  },
 ];
+
+/**
+ * The `blogs` array above is kept in the order posts were written (oldest
+ * first), which is the easiest order to edit by hand. Every listing in the UI
+ * should use this instead, otherwise "Latest from the Blog" shows the oldest
+ * posts and hides the newest ones.
+ */
+export const blogsNewestFirst: Blog[] = blogs
+  .map((blog, index) => ({ blog, index }))
+  .sort((a, b) => {
+    const diff = new Date(b.blog.date).getTime() - new Date(a.blog.date).getTime();
+    // Same publish date: the one written later (further down the array) wins.
+    return diff !== 0 ? diff : b.index - a.index;
+  })
+  .map(({ blog }) => blog);

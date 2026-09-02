@@ -13,7 +13,25 @@ export default function Category() {
 
   if (!category) return <NotFound />;
 
-  const filteredRecipes = recipes.filter(r => r.category === slug);
+  // A category slug can describe three different things in our data:
+  //   • cuisine   -> recipe.category   ("south-asian", "american", "fusion")
+  //   • meal time -> recipe.mealType   ("breakfast", "lunch", "dinner", "snacks")
+  //   • diet goal -> recipe.tags       ("High Protein", "Weight Loss", ...)
+  // Matching only on recipe.category left 7 of the 10 category pages with zero
+  // recipes on them, so all three are checked here.
+  const MEAL_SLUGS = ["breakfast", "lunch", "dinner", "snacks"];
+  const TAG_FOR_SLUG: Record<string, string> = {
+    "weight-loss": "Weight Loss",
+    "high-protein": "High Protein",
+    "diabetic-friendly": "Diabetic Friendly",
+  };
+
+  const filteredRecipes = recipes.filter(
+    (r) =>
+      r.category === slug ||
+      (MEAL_SLUGS.includes(slug) && r.mealType === slug) ||
+      (TAG_FOR_SLUG[slug] !== undefined && r.tags.includes(TAG_FOR_SLUG[slug])),
+  );
   const featuredBlogs = blogs.filter(b => b.recipeCategory === slug);
 
   return (
@@ -53,8 +71,10 @@ export default function Category() {
                         alt={blog.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         onError={(e) => {
-                          (e.target as HTMLImageElement).src =
-                            "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=800&auto=format&fit=crop";
+                          // Hide a broken image rather than swapping in an
+                          // unrelated stock photo (that is how the same smoothie
+                          // picture used to show up all over the site).
+                          (e.currentTarget as HTMLImageElement).style.display = "none";
                         }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />

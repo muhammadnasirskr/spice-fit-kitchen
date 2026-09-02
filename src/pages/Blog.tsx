@@ -1,6 +1,6 @@
 import { Seo } from "@/components/Seo";
 import { Link } from "wouter";
-import { blogs } from "@/data/blogs";
+import { blogsNewestFirst } from "@/data/blogs";
 import { Clock, ArrowRight, BookOpen } from "lucide-react";
 
 export default function Blog() {
@@ -30,14 +30,14 @@ export default function Blog() {
 
       {/* Blog cards */}
       <div className="container mx-auto px-4 py-14 max-w-5xl">
-        {blogs.length === 0 ? (
+        {blogsNewestFirst.length === 0 ? (
           <div className="text-center py-24 text-muted-foreground">
             <BookOpen className="w-12 h-12 mx-auto mb-4 opacity-30" />
             <p className="text-lg">No articles yet — check back soon!</p>
           </div>
         ) : (
           <div className="grid gap-10">
-            {blogs.map((blog) => (
+            {blogsNewestFirst.map((blog) => (
               <Link key={blog.slug} href={`/blog/${blog.slug}`}>
                 <article className="group bg-card border border-border rounded-2xl overflow-hidden flex flex-col md:flex-row hover:shadow-xl transition-all duration-300 cursor-pointer">
                   {/* Thumbnail */}
@@ -48,8 +48,9 @@ export default function Blog() {
                       loading="lazy"
                       className="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       onError={(e) => {
-                        (e.target as HTMLImageElement).src =
-                          "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=800&auto=format&fit=crop";
+                        // Hide a broken image rather than swapping in an
+                        // unrelated stock photo.
+                        (e.currentTarget as HTMLImageElement).style.display = "none";
                       }}
                     />
                     <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">

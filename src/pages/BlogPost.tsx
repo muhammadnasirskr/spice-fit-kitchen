@@ -194,7 +194,10 @@ export default function BlogPost() {
                       {section.items.map((item, j) => (
                         <li key={j} className="flex gap-3 items-start text-muted-foreground leading-relaxed">
                           <span className="mt-2 flex-shrink-0 w-2 h-2 rounded-full bg-primary" />
-                          {renderText(item)}
+                          {/* renderText returns a mixed array of strings and <Link>s.
+                              Without this wrapper each fragment becomes its own flex
+                              item, which breaks any bullet that contains a link. */}
+                          <span>{renderText(item)}</span>
                         </li>
                       ))}
                     </ul>
