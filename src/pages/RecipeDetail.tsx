@@ -1,6 +1,7 @@
 import { useParams, Link } from "wouter";
 import { recipes } from "@/data/recipes";
 import { Seo } from "@/components/Seo";
+import { renderText } from "@/lib/rich-text";
 import { Clock, Users, Flame, ChefHat, Check, Printer, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RecipeCard } from "@/components/recipes/RecipeCard";
@@ -122,6 +123,13 @@ export default function RecipeDetail() {
               </div>
             </div>
 
+            {/* Lead paragraph (optional — recipes are being filled in over time) */}
+            {recipe.intro && (
+              <p className="text-lg text-muted-foreground leading-relaxed border-l-4 border-primary pl-5 mb-12">
+                {renderText(recipe.intro)}
+              </p>
+            )}
+
             {/* Ingredients */}
             <h2 className="text-3xl font-bold font-heading mb-6">Ingredients</h2>
             <div className="bg-card border border-border p-6 md:p-8 rounded-2xl mb-12 shadow-sm">
@@ -162,6 +170,28 @@ export default function RecipeDetail() {
                 </div>
               ))}
             </div>
+
+            {/* Long-form sections (optional) */}
+            {[
+              { heading: "Why This Recipe Works", items: recipe.whyItWorks },
+              { heading: "Common Mistakes to Avoid", items: recipe.commonMistakes },
+              { heading: "Ingredient Swaps That Work", items: recipe.substitutions },
+              { heading: "Storage & Reheating", items: recipe.storage },
+            ]
+              .filter((s) => s.items && s.items.length > 0)
+              .map((section) => (
+                <div key={section.heading} className="mb-12">
+                  <h2 className="text-3xl font-bold font-heading mb-6">{section.heading}</h2>
+                  <ul className="space-y-3">
+                    {section.items!.map((item, i) => (
+                      <li key={i} className="flex gap-3 items-start text-muted-foreground text-lg leading-relaxed">
+                        <span className="mt-2.5 flex-shrink-0 w-2 h-2 rounded-full bg-primary" />
+                        <span>{renderText(item)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
 
             {/* FAQs */}
             <h2 className="text-3xl font-bold font-heading mb-6">Frequently Asked Questions</h2>

@@ -39,6 +39,23 @@ export type Recipe = {
   tips: string[];
   faq: { question: string; answer: string }[];
   relatedRecipeIds: string[];
+
+  /* ------------------------------------------------------------------
+   * Long-form sections. All optional so recipes can be filled in over
+   * several batches without breaking the ones that are not done yet.
+   * Every string supports [label](/path) interlinks.
+   * ------------------------------------------------------------------ */
+
+  /** Lead paragraph shown above the ingredients — the "why" of the dish. */
+  intro?: string;
+  /** The technique that makes this version work. */
+  whyItWorks?: string[];
+  /** What actually goes wrong when people cook this. */
+  commonMistakes?: string[];
+  /** Swaps that genuinely work, with the trade-off named. */
+  substitutions?: string[];
+  /** Keeping and reheating leftovers. */
+  storage?: string[];
 };
 
 export const recipes: Recipe[] = [
@@ -85,6 +102,31 @@ export const recipes: Recipe[] = [
     tips: ["Use smoked paprika for extra depth.", "Serve with cauliflower rice for a low-carb option."],
     faq: [{ question: "Can I use chicken thighs?", answer: "Yes, chicken thighs stay very tender and work beautifully." }],
     relatedRecipeIds: ["r2", "r6", "r10"],
+    intro:
+      "Restaurant butter chicken gets its silk from a serious amount of butter and heavy cream — often 500 to 600 calories a serving before the rice even arrives. This version keeps the tomato base and the spice work and takes its richness from thick Greek yogurt, with just two tablespoons of light cream stirred in at the end. It lands at 320 calories with 35g of protein. If you want the longer story behind each swap, we wrote a full guide to [healthy butter chicken](/blog/healthy-butter-chicken).",
+    whyItWorks: [
+      "Yogurt does two jobs here. In the marinade its acidity tenderises the chicken breast so it does not dry out; in the sauce it replaces most of the cream without thinning the texture.",
+      "The tomato puree is simmered until it thickens and the oil starts to separate at the edges. That separation is your signal that the raw tomato taste has cooked out — skip it and the sauce stays flat no matter how much cream you add.",
+      "The chicken is browned separately before it goes back into the sauce. Those browned edges carry most of the flavour; chicken poached straight in the sauce tastes boiled.",
+      "Only two tablespoons of light cream go in, and they go in at the end off a hard boil. That is enough for the glossy finish without the fat that usually comes with it.",
+    ],
+    commonMistakes: [
+      "Boiling the sauce after the yogurt or cream goes in. Dairy splits at a rolling boil and you end up with a grainy sauce. Drop the heat to a bare simmer first.",
+      "Marinating for only a couple of minutes. Fifteen minutes is the minimum for the yogurt to do anything at all; an hour in the fridge is noticeably better.",
+      "Adding the garam masala early. It is a finishing spice and its aroma cooks off — stir it through in the last minute.",
+      "Using lean breast and then overcooking it. Chicken breast goes from juicy to dry in about ninety seconds, so pull it off the heat while it is only just done.",
+    ],
+    substitutions: [
+      "Chicken thighs instead of breast: far more forgiving, stay tender, and cost you roughly 60 extra calories a serving.",
+      "Cashew paste instead of the light cream — soak 10 cashews and blend with a little water. Slightly sweeter, similar calories, and dairy-free.",
+      "Paneer instead of chicken makes it vegetarian. See [Paneer Tikka Skewers](/recipes/r12) for how to keep paneer from turning rubbery.",
+      "Smoked paprika in place of some of the chilli powder gives you a tandoor-like smokiness without owning a grill.",
+    ],
+    storage: [
+      "Keeps 3 days covered in the fridge, and honestly tastes better on day two once the spices have settled.",
+      "Reheat gently on the stove with a splash of water. A microwave on full power will split the sauce.",
+      "Freezes for up to 2 months — but freeze it before the cream goes in and stir the cream through after reheating. Dairy sauces go grainy through a freeze.",
+    ],
   },
   {
     id: "r2",
@@ -212,6 +254,31 @@ export const recipes: Recipe[] = [
     tips: ["Finish with a squeeze of lemon juice for brightness.", "Top with fresh cilantro before serving."],
     faq: [{ question: "Can I make this vegan?", answer: "Yes, simply use olive oil instead of ghee." }],
     relatedRecipeIds: ["r3", "r9", "r14"],
+    intro:
+      "Dal tadka is really two things that meet at the last second: soft, plainly cooked lentils, and a small pan of fat with whole spices bloomed in it. Almost all the flavour comes from that second part, and it takes about ninety seconds. Get the tadka right and this is one of the best meals you can build out of a cupboard — around 280 calories and 16g of plant protein.",
+    whyItWorks: [
+      "The lentils are cooked plain, with only turmeric and salt. Every spice thrown into the pot at the start just gets boiled into mush and loses its edge.",
+      "Blooming whole cumin seeds in hot fat releases oil-soluble compounds that water cannot touch. That is why a tadka tastes nothing like the same spices stirred in dry.",
+      "The tadka is poured over the dal at the very end, off the heat, so the garlic and chilli aroma stays intact instead of simmering away.",
+      "Toor dal breaks down into a creamy body all by itself. There is no cream in this dish and it does not need any.",
+    ],
+    commonMistakes: [
+      "Burning the garlic. It goes from golden to bitter in seconds — add it after the cumin has already started to sizzle, not at the same time.",
+      "Under-salting. Lentils absorb a surprising amount of salt, so taste after the tadka goes in rather than before.",
+      "Making it too thick. Dal should pour, not stand up. Loosen it with hot water until it moves when you tilt the bowl.",
+      "Skipping the acid at the end. A squeeze of lemon is what stops it tasting heavy, and it is not optional.",
+    ],
+    substitutions: [
+      "Olive oil instead of ghee makes it fully vegan with no loss of texture and no meaningful calorie change.",
+      "Masoor dal (red lentils) cooks in about half the time and gives you a softer, slightly sweeter dal.",
+      "No dried red chilli? A pinch of chilli flakes in the tadka works, though you lose the smoky note the whole chilli gives.",
+      "Spoon it over quinoa instead of rice to add roughly 8g of protein — the same trick behind our [Quinoa Khichdi](/recipes/r14).",
+    ],
+    storage: [
+      "Keeps 4 days in the fridge and thickens as it sits, so add hot water when you reheat it.",
+      "Freezes well for 2 months. Freeze the dal only and make a fresh tadka when you serve — the tadka aroma does not survive a freezer.",
+      "If you are batch cooking, double the lentils but keep the tadka fresh each time. Ninety seconds of work, and it is the whole dish.",
+    ],
   },
   {
     id: "r5",
@@ -466,6 +533,31 @@ export const recipes: Recipe[] = [
     tips: ["Add spinach or mushrooms to boost nutrition.", "Use a non-stick pan to use less oil."],
     faq: [{ question: "Can I use whole eggs?", answer: "Yes, whole eggs add richer flavor — use 4 whole eggs instead of 6 whites." }],
     relatedRecipeIds: ["r3", "r7", "r18"],
+    intro:
+      "This has the best protein-to-calorie ratio of anything on the site: 22g of protein for 175 calories, in about twenty minutes. It is filed under breakfast, but bhurji with a roti is an ordinary weeknight dinner in most South Asian homes — which is why it also turns up on our [high-protein Indian dinners](/blog/high-protein-indian-dinners-under-400-calories) list.",
+    whyItWorks: [
+      "The onion is cooked properly soft before anything else goes in. Raw-tasting onion is the single thing that makes homemade bhurji taste amateur.",
+      "The tomatoes are cooked until they break down and give up their liquid, so the eggs are not being scrambled into a watery mixture.",
+      "Egg whites go in last, over lower heat. They set much faster than whole eggs and turn rubbery the moment they are overcooked.",
+      "Cumin seeds go into the oil first, not into the mixture later. Whole spice in hot fat is the base flavour of the entire dish.",
+    ],
+    commonMistakes: [
+      "Cooking the egg whites on high heat. They tighten and squeak. Keep it medium-low and take the pan off while they still look slightly underdone — they carry on setting.",
+      "Salting the eggs too early. Salt draws water out and makes the bhurji weepy; salt the onion and tomato base instead.",
+      "Not cooking the tomatoes down far enough. If you can still see liquid pooling in the pan, the bhurji will be soupy.",
+      "Using a thin pan. Egg white sticks aggressively — a non-stick pan lets you get away with a teaspoon of oil instead of a tablespoon.",
+    ],
+    substitutions: [
+      "Four whole eggs instead of six whites: richer, more forgiving to cook, and about 100 extra calories.",
+      "A handful of spinach or sliced mushrooms stirred in with the tomato adds volume and fibre for almost nothing.",
+      "Crumbled paneer instead of eggs makes it a vegetarian bhurji — same method, roughly 60 more calories.",
+      "No green chilli? A pinch of chilli powder works, but you lose the fresh heat that makes bhurji taste like bhurji.",
+    ],
+    storage: [
+      "Best eaten straight from the pan. Egg white toughens on reheating more than any other protein on this site.",
+      "If you want to prep ahead, cook the onion and tomato masala base and keep it in the fridge for up to 3 days. Then it is a four-minute breakfast.",
+      "Do not freeze it. Cooked egg white turns watery and rubbery after thawing.",
+    ],
   },
   {
     id: "r11",
@@ -550,6 +642,32 @@ export const recipes: Recipe[] = [
     tips: ["Soak wooden skewers in water for 30 minutes before grilling.", "Serve with mint chutney and sliced onion."],
     faq: [{ question: "Can I bake instead of grill?", answer: "Yes, bake at 450°F for 15 minutes and broil for the last 2 minutes for char." }],
     relatedRecipeIds: ["r1", "r6", "r9"],
+    intro:
+      "Paneer is one of very few vegetarian proteins that holds its shape under a grill instead of collapsing, which is the whole reason tikka works with it. Thick Greek yogurt in the marinade does the clinging and the tenderising, and the char at the end does the rest. Three skewers with the peppers is a complete plate at around 300 calories and 18g of protein.",
+    whyItWorks: [
+      "Thick yogurt, not thin. Greek yogurt clings to the paneer instead of sliding off in the heat, so the spices stay on the surface where they can actually char.",
+      "The lemon juice is doing more than flavour. The acid softens the outer layer of the paneer so it does not turn squeaky in the mouth.",
+      "The peppers go on the same skewer on purpose. They give off a little moisture as they cook, which keeps the paneer next to them from drying out.",
+      "High heat, short time. Paneer does not need cooking through — it only needs colour. Past 15 minutes it starts to toughen.",
+    ],
+    commonMistakes: [
+      "Marinating for hours. Twenty minutes is plenty; leave it too long in acid and the paneer surface goes mushy.",
+      "Cutting the cubes too small. Small cubes dry out before they get any char — aim for about one inch.",
+      "Crowding the skewer. The pieces need a gap between them or they steam each other instead of charring.",
+      "Using dry wooden skewers on a grill. Soak them for 30 minutes or they burn through and drop your dinner into the fire.",
+    ],
+    substitutions: [
+      "Extra-firm tofu, pressed properly dry, makes this vegan. It takes the marinade well but needs a longer press or it steams.",
+      "Chicken breast instead of paneer takes it to roughly 35g of protein — grill it longer, to 165°F internal.",
+      "Ready-made tikka paste works if you have no spice blend, but check the label. Some are surprisingly high in oil.",
+      "No grill at all? Broil at 450°F for 15 minutes, turning once — or use the method in our [air fryer tandoori chicken](/blog/air-fryer-tandoori-chicken) guide.",
+    ],
+    storage: [
+      "Best within the hour. Charred paneer softens as it sits and loses the contrast that makes it good.",
+      "Leftovers keep 2 days in the fridge and are genuinely good cold, chopped into a salad or a wrap.",
+      "Reheat in a hot dry pan for a minute a side. A microwave turns paneer rubbery.",
+      "Do not freeze cooked paneer — the texture goes crumbly on thawing.",
+    ],
   },
   {
     id: "r13",
@@ -719,6 +837,31 @@ export const recipes: Recipe[] = [
     tips: ["Add a pinch of nutmeg to the spinach for depth.", "For extra protein, add chickpeas alongside the paneer."],
     faq: [{ question: "Can I use frozen spinach?", answer: "Yes, frozen spinach works great — thaw and squeeze out excess water first." }],
     relatedRecipeIds: ["r1", "r4", "r12"],
+    intro:
+      "Restaurant saag paneer is usually thickened with cream, sometimes a great deal of it. This version takes its body from the spinach itself — blanched, then blended smooth — so the whole pan needs about one tablespoon of cream instead of a quarter cup. That is 340 calories and 19g of protein, and it still tastes rich.",
+    whyItWorks: [
+      "Blanching the spinach for under a minute and blending it straight away keeps the colour bright green. Spinach simmered for twenty minutes turns khaki and tastes of very little.",
+      "The blended puree is the thickener. Once spinach is properly broken down it holds a sauce on its own, which is why one tablespoon of cream is enough.",
+      "The masala base — onion, garlic, spices — is built and cooked before the spinach goes anywhere near it, so the spinach is never boiled for long.",
+      "Pan-searing the paneer first gives it a golden crust that stops the cubes going soft and bland once they are in the sauce.",
+    ],
+    commonMistakes: [
+      "Adding the spinach puree early and letting it simmer. Ten minutes is the limit — past that both the colour and the flavour go.",
+      "Not squeezing frozen spinach dry. It carries a lot of water and will thin your sauce into soup.",
+      "Boiling it after the cream goes in. It splits. Stir the cream through off the heat.",
+      "Skipping the sear on the paneer. It takes three minutes and it is the difference between saag paneer and green sauce with cubes floating in it.",
+    ],
+    substitutions: [
+      "Frozen spinach is fine here — thaw and squeeze it hard first. It is cheaper and no worse, since it all gets blended anyway.",
+      "Chickpeas alongside the paneer add fibre; swapping the paneer out entirely makes it vegan and brings it to about 12g of protein.",
+      "Cashew paste instead of cream keeps the richness without dairy and adds a little natural sweetness.",
+      "A pinch of nutmeg is traditional with spinach and dairy. Keep it small — too much and it takes over.",
+    ],
+    storage: [
+      "Keeps 3 days in the fridge. The colour dulls a little but the flavour holds up well.",
+      "Reheat gently. Boiling it again will split the cream and dull the spinach further.",
+      "Freezes for 2 months, but freeze the saag without the paneer and add freshly seared cubes when you reheat — frozen paneer turns crumbly.",
+    ],
   },
   {
     id: "r17",

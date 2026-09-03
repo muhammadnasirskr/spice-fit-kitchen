@@ -1,40 +1,11 @@
 import { useParams, Link } from "wouter";
-import type { ReactNode } from "react";
+import { renderText } from "@/lib/rich-text";
 import { Seo } from "@/components/Seo";
 import { blogs } from "@/data/blogs";
 import NotFound from "./not-found";
 import { Clock, Calendar, ChefHat } from "lucide-react";
 
-/** Turns [label](/path) markdown-style links into clickable internal/external links. */
-function renderText(text?: string): ReactNode {
-  if (!text) return null;
-  const nodes: ReactNode[] = [];
-  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
-  let last = 0;
-  let m: RegExpExecArray | null;
-  let k = 0;
-  while ((m = regex.exec(text)) !== null) {
-    if (m.index > last) nodes.push(text.slice(last, m.index));
-    const label = m[1];
-    const url = m[2];
-    if (url.startsWith("/")) {
-      nodes.push(
-        <Link key={k++} href={url} className="text-primary font-medium hover:underline">
-          {label}
-        </Link>
-      );
-    } else {
-      nodes.push(
-        <a key={k++} href={url} target="_blank" rel="noopener noreferrer" className="text-primary font-medium hover:underline">
-          {label}
-        </a>
-      );
-    }
-    last = m.index + m[0].length;
-  }
-  if (last < text.length) nodes.push(text.slice(last));
-  return nodes;
-}
+// renderText now lives in src/lib/rich-text.tsx (shared with recipe pages).
 
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
