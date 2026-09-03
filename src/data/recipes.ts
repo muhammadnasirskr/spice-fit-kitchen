@@ -169,6 +169,31 @@ export const recipes: Recipe[] = [
     tips: ["Do not overbake — salmon is done when it flakes easily.", "Add chili flakes for a kick."],
     faq: [{ question: "Can I use frozen salmon?", answer: "Yes, thaw completely before baking for best results." }],
     relatedRecipeIds: ["r1", "r5", "r8"],
+    intro:
+      "Salmon is the least complicated way to get 42g of protein onto a plate in 25 minutes, and this version does almost nothing to it — oil, lemon, garlic, dill, oven. At 410 calories it is the highest-calorie main on the site, and that is worth being straight about: 25g of it is fat, and most of that fat is the omega-3 you are eating salmon for in the first place.",
+    whyItWorks: [
+      "400°F is hot enough to cook the fillet through in 12 to 15 minutes without giving the outside time to dry out. Lower and slower is how salmon ends up chalky.",
+      "Lemon zest carries more of the citrus aroma than the juice does — the oils live in the peel. Using both is why this tastes brighter than a squeeze of lemon at the table.",
+      "Brushing the oil on first gives the garlic and herbs something to cling to, and stops them scorching directly on bare fish.",
+      "Lining the tray with foil is not laziness. Salmon skin welds itself to hot metal and the fillet tears when you try to lift it.",
+    ],
+    commonMistakes: [
+      "Overbaking. This is the only real way to ruin salmon. It is done when the flesh flakes under light pressure and still looks slightly translucent in the very centre — it keeps cooking after it leaves the oven.",
+      "Cooking it straight from the fridge. Fifteen minutes at room temperature gives you an evenly cooked fillet; a cold one is dry at the edges before the middle is done.",
+      "Leaving raw garlic exposed on a thin tail piece. It burns. Tuck it under the fillet or mix it into the oil instead.",
+      "Not patting the fillet dry. Surface water steams the fish rather than roasting it, and you lose the browning entirely.",
+    ],
+    substitutions: [
+      "Frozen salmon is fine — thaw it fully in the fridge overnight and pat it very dry, otherwise it steams.",
+      "Dill swaps cleanly for parsley, tarragon or cilantro. Dried herbs work at about a third of the quantity.",
+      "Trout or Arctic char cook almost identically and usually cost less.",
+      "Want similar protein for fewer calories? [Chicken Tikka Salad](/recipes/r18) gives you 40g at 390, and our [air fryer tandoori chicken](/blog/air-fryer-tandoori-chicken) 35g at 250 — but neither brings the omega-3.",
+    ],
+    storage: [
+      "Cooked salmon keeps 2 days in the fridge and no longer. It is one of the fastest proteins to develop an off smell.",
+      "Do not reheat it in a microwave unless you want the whole house to know. Leftovers are genuinely better cold, flaked into a salad.",
+      "Raw fillets freeze for 3 months. Cooked salmon freezes badly and comes back dry.",
+    ],
   },
   {
     id: "r3",
@@ -323,6 +348,31 @@ export const recipes: Recipe[] = [
     tips: ["Meal prep all components separately and assemble fresh.", "Add hot sauce or sriracha for a kick."],
     faq: [{ question: "Can I use brown rice instead of quinoa?", answer: "Absolutely, brown rice works great and adds a nutty flavor." }],
     relatedRecipeIds: ["r2", "r8", "r15"],
+    intro:
+      "This is the biggest plate on the site at 480 calories — and also the most protein at 45g, with 9g of fibre alongside it. It is built to be assembled rather than cooked: grilled chicken, roasted sweet potato, quinoa, avocado, greens, tahini. Cook the components once on a Sunday and it becomes a four-minute lunch for the rest of the week.",
+    whyItWorks: [
+      "Every component is cooked separately and cooled before assembly. Warm quinoa piled straight onto greens wilts them into a soggy base within minutes.",
+      "Sweet potato at 425°F caramelises at the edges instead of steaming. At 375°F it goes soft and sweet but never browns, and the browning is most of the flavour.",
+      "Tahini is one of the few dressings that needs almost nothing added. It is thick enough to coat without oil, and its slight bitterness balances the sweetness of the roasted potato.",
+      "Chicken breast at 6 to 7 minutes a side reaches temperature without drying — but it has to rest five minutes before slicing, or the juices end up on the board instead of in the bowl.",
+    ],
+    commonMistakes: [
+      "Assembling the whole week with the avocado already in. It browns and the greens go limp. Slice the avocado on the morning you eat it.",
+      "Dressing the bowls the night before. Keep the tahini in a small separate jar; poured on early it soaks the quinoa into paste.",
+      "Crowding the sweet potato on the roasting tray. Cubes touching each other steam instead of roasting — use two trays if you have to.",
+      "Slicing the chicken the second it leaves the grill. Five minutes of rest is the whole difference between juicy and dry.",
+    ],
+    substitutions: [
+      "Brown rice instead of quinoa works and adds a nuttier flavour, but drops the protein by roughly 4g a serving.",
+      "Chickpeas in place of the chicken makes it vegetarian — around 20g of protein rather than 45g, and about 60 fewer calories.",
+      "Swap the tahini for the yogurt-mint dressing from [Chicken Tikka Salad](/recipes/r18) if you want it lighter.",
+      "Salmon instead of chicken brings omega-3 at similar protein — see [Zesty Lemon Herb Salmon](/recipes/r2) for the timing.",
+    ],
+    storage: [
+      "Components keep separately for 4 days: chicken, quinoa and sweet potato each in their own container.",
+      "Assembled bowls without avocado or dressing hold 2 days and travel well.",
+      "Reheat only the chicken and sweet potato, for about a minute. Leave the greens and quinoa cold — a fully hot bowl is a different and worse dish.",
+    ],
   },
   {
     id: "r6",
@@ -449,6 +499,31 @@ export const recipes: Recipe[] = [
     tips: ["Add a dollop of Greek yogurt instead of sour cream for extra protein.", "Top with shredded cabbage for crunch."],
     faq: [{ question: "Can I use chicken instead of turkey?", answer: "Ground chicken works great as a substitute." }],
     relatedRecipeIds: ["r1", "r5", "r16"],
+    intro:
+      "Keema is already one of the leanest things in the South Asian repertoire when it is made with ground turkey, and putting it into corn tortillas instead of over rice cuts the carbohydrate load without removing anything you would actually miss. Thirty minutes, 32g of protein, and it is the dish that gets requested without anyone noticing it is the healthy option.",
+    whyItWorks: [
+      "The turkey is browned properly before the spices go anywhere near it. Spices added to raw, wet meat end up steaming instead of toasting.",
+      "Corn tortillas rather than rice: two small ones carry roughly half the carbohydrate of a cup of rice, and they bring a toasted corn flavour rice does not have.",
+      "Garam masala goes in at the end. Cumin and coriander can take sustained heat; garam masala loses its aroma if it cooks for long.",
+      "Pico de gallo is doing the job a sauce would — acid and freshness against spiced meat, with no added fat at all.",
+    ],
+    commonMistakes: [
+      "Not draining the turkey. Even lean ground turkey gives off liquid; pour it away or the keema will never brown.",
+      "Breaking the meat up too finely, too early. Let it sit and colour for a couple of minutes first — that colour is the flavour.",
+      "Serving in cold tortillas. Thirty seconds a side in a dry pan transforms them, and stops them cracking when you fold.",
+      "Piling on cheese and sour cream. That is exactly where a 370-calorie dinner quietly becomes a 600-calorie one.",
+    ],
+    substitutions: [
+      "Ground chicken behaves identically. Lean beef also works, at roughly 100 more calories a serving.",
+      "Greek yogurt instead of sour cream adds protein rather than fat, with the same tang.",
+      "Flour tortillas are fine but add about 40 calories each and lose the corn flavour.",
+      "For a vegan version of the same format, [Sweet Potato Black Bean Tacos](/recipes/r15) use the same tortillas and toppings.",
+    ],
+    storage: [
+      "The keema itself keeps 3 days and reheats better than most cooked meat — it was always meant to be a filling.",
+      "Store keema, tortillas and toppings separately, always. Assembled tacos go soggy within the hour.",
+      "Keema freezes well for 2 months. Freeze it flat in a bag and it thaws in minutes.",
+    ],
   },
   {
     id: "r9",
@@ -752,6 +827,31 @@ export const recipes: Recipe[] = [
     tips: ["Add a dollop of ghee on top before serving for richness.", "Best served with plain yogurt on the side."],
     faq: [{ question: "Can I use red lentils?", answer: "Yes, red lentils cook faster and give a creamy texture." }],
     relatedRecipeIds: ["r4", "r9", "r6"],
+    intro:
+      "Khichdi is what South Asian families cook when someone is unwell, when the fridge is empty, or when nobody wants to think about dinner. This version swaps the rice for quinoa, which lifts the protein and gives a complete amino acid profile — quinoa and moong dal together cover what neither manages alone. 320 calories, 14g of protein, one pot.",
+    whyItWorks: [
+      "Quinoa and moong dal cook in almost the same time, which is the entire reason this swap works. Most other grains would collapse into mush waiting for the dal.",
+      "Rinsing the quinoa is not optional. Its natural saponin coating is genuinely bitter, and thirty seconds under running water removes it.",
+      "A 1:3 ratio of grain-and-dal to water gives the soft, spoonable texture khichdi is meant to have. Use less and you get a pilaf, which is a different dish.",
+      "The mustard seed tadka goes on at the very end, off the heat. Everything before it is deliberately plain — the tadka is where the flavour actually comes from.",
+    ],
+    commonMistakes: [
+      "Skipping the rinse, then wondering why it tastes faintly of soap.",
+      "Making it too dry. Khichdi should slump on the spoon, and it thickens a lot as it stands — make it looser than you think you want.",
+      "Adding the vegetables late. They go in with the grain so they soften and melt into it; crunchy vegetables in khichdi feel wrong.",
+      "Leaving mustard seeds in the oil after they stop popping. A few seconds past that point and they turn bitter.",
+    ],
+    substitutions: [
+      "Red lentils (masoor) cook faster and give a creamier result, with roughly the same protein.",
+      "Plain rice instead of quinoa is the traditional version — about 6g less protein and a softer texture.",
+      "A spoon of ghee on top is traditional and adds around 40 calories. Olive oil keeps it vegan.",
+      "Serve it with plain yogurt for another 10g of protein, or alongside [Spiced Sweet Potato Chaat](/recipes/r19) if you want a fuller plate.",
+    ],
+    storage: [
+      "Keeps 3 days. It sets almost solid in the fridge — add hot water and stir while reheating and it comes back completely.",
+      "Freezes for 2 months, though the vegetables soften further. Make a fresh tadka after reheating.",
+      "This is one of the few dishes here that is arguably better on day two, once the dal has fully broken down.",
+    ],
   },
   {
     id: "r15",
@@ -945,6 +1045,31 @@ export const recipes: Recipe[] = [
     tips: ["Make extra chicken to use in wraps the next day.", "Chill the salad plates before serving for extra freshness."],
     faq: [{ question: "What is a good yogurt dressing?", answer: "Mix Greek yogurt with fresh mint, garlic, lemon juice, and a pinch of cumin." }],
     relatedRecipeIds: ["r5", "r8", "r10"],
+    intro:
+      "This began as a way to use up leftover tikka and turned into the reason to cook tikka in the first place. Forty grams of protein for 390 calories, and unlike most salads it genuinely holds you until dinner. The yogurt-mint dressing does the job a heavy dressing usually does, at a fraction of the fat.",
+    whyItWorks: [
+      "Cutting the chicken into strips before marinating gives the paste far more surface to cling to. A whole breast only ever takes flavour on the outside.",
+      "The chicken goes on warm — not hot, not cold. Hot chicken wilts the romaine; cold chicken makes the whole bowl taste like leftovers.",
+      "Greek yogurt makes a dressing thick enough to coat leaves without any oil. That is the single reason this lands at 390 calories instead of 600.",
+      "Romaine and cucumber are both crisp, high-water vegetables. They hold up under a warm topping in a way spinach or rocket simply will not.",
+    ],
+    commonMistakes: [
+      "Dressing it before the chicken goes on. The leaves collapse. Dress at the table, and only the portion you are eating now.",
+      "Using thin, runny yogurt. If it slides off a spoon it will slide off the salad — strain it or start with proper Greek yogurt.",
+      "Overcooking the strips. Cut thin they need 3 to 4 minutes in total; two minutes past that and they are dry.",
+      "Skipping the salt on the cucumber. A light salting ten minutes ahead, then a pat dry, stops it releasing water into the bowl.",
+    ],
+    substitutions: [
+      "Ready-made tikka paste saves real time and works well — just read the label, some carry a lot of oil.",
+      "Paneer instead of chicken makes it vegetarian at about 18g of protein; the marinade method is in [Paneer Tikka Skewers](/recipes/r12).",
+      "Add quinoa and roasted sweet potato and you have essentially built the [Grilled Chicken Power Bowl](/recipes/r5).",
+      "No mint? The dressing works with cilantro, though it starts tasting noticeably more like raita.",
+    ],
+    storage: [
+      "Keep the three parts separate: chicken 3 days, chopped salad 2 days, dressing 4 days.",
+      "The chicken is excellent cold the next day in a wrap — arguably a better second meal than the salad is.",
+      "Never store it assembled and dressed. There is nothing to save.",
+    ],
   },
   {
     id: "r19",
