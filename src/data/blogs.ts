@@ -45,7 +45,7 @@ export const blogs: Blog[] = [
     subtitle: "The Ultimate Guide",
     category: "High Protein",
     recipeCategory: "american",
-    date: "June 15, 2026",
+    date: "August 27, 2026",
     readTime: "8 min read",
     image: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=800&auto=format&fit=crop",
     heroImage: "https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=1600&auto=format&fit=crop",

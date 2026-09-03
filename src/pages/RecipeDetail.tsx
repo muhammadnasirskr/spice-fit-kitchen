@@ -2,6 +2,22 @@ import { useParams, Link } from "wouter";
 import { recipes } from "@/data/recipes";
 import { Seo } from "@/components/Seo";
 import { renderText } from "@/lib/rich-text";
+
+/**
+ * "2026-08-27" -> "August 27, 2026".
+ * Parsed by hand rather than with new Date(), which reads a bare ISO date as
+ * UTC midnight and can render the previous day west of Greenwich.
+ */
+const MONTHS = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
+];
+function formatDate(iso?: string): string {
+  if (!iso) return "";
+  const [y, m, d] = iso.split("-").map(Number);
+  if (!y || !m || !d) return iso;
+  return `${MONTHS[m - 1]} ${d}, ${y}`;
+}
 import { Clock, Users, Flame, ChefHat, Check, Printer, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RecipeCard } from "@/components/recipes/RecipeCard";
@@ -110,7 +126,12 @@ export default function RecipeDetail() {
                 </Avatar>
                 <div>
                   <div className="font-bold">Recipe by {recipe.author.name}</div>
-                  <div className="text-sm text-muted-foreground">Published on {recipe.publishedDate}</div>
+                  <div className="text-sm text-muted-foreground">
+                    Published {formatDate(recipe.publishedDate)}
+                    {recipe.updatedDate && recipe.updatedDate !== recipe.publishedDate && (
+                      <> · Updated {formatDate(recipe.updatedDate)}</>
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="flex gap-2">

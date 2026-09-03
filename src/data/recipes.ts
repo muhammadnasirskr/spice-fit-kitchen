@@ -20,7 +20,11 @@ export type Recipe = {
   rating: number;
   ratingCount: number;
   author: { name: string; avatar?: string };
+  /** The date this page first went live ON THIS SITE. The original template
+   *  shipped with invented 2024 dates; the site did not exist until Aug 2026. */
   publishedDate: string;
+  /** Last substantial rewrite. Feeds dateModified in the Recipe schema. */
+  updatedDate?: string;
   tags: string[];
   description: string;
   ingredients: { amount: string; unit: string; name: string }[];
@@ -81,7 +85,8 @@ export const recipes: Recipe[] = [
     rating: 4.8,
     ratingCount: 342,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-10-12",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["High Protein", "Gluten Free", "Comfort Food"],
     description: "A healthier take on the classic Indian favorite, using yogurt and a touch of cream instead of heavy cream and butter.",
     ingredients: [
@@ -150,7 +155,8 @@ export const recipes: Recipe[] = [
     rating: 4.9,
     ratingCount: 128,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-11-05",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["Keto", "High Protein", "Omega-3", "Gluten Free"],
     description: "Quick, healthy, and bursting with bright citrus and herb flavor. Perfect for busy weeknights.",
     ingredients: [
@@ -217,7 +223,8 @@ export const recipes: Recipe[] = [
     rating: 4.6,
     ratingCount: 85,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-09-20",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["Vegan", "High Fiber", "Quick", "Diabetic Friendly"],
     description: "A savory, spiced Indian twist on oatmeal, loaded with colorful vegetables and warming spices.",
     ingredients: [
@@ -284,7 +291,8 @@ export const recipes: Recipe[] = [
     rating: 4.7,
     ratingCount: 210,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-08-14",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["Vegan", "High Fiber", "Gluten Free", "Diabetic Friendly", "Weight Loss"],
     description: "A comforting yellow lentil soup tempered with aromatic ghee, cumin, and dried chilies — the soul of Indian home cooking.",
     ingredients: [
@@ -352,7 +360,8 @@ export const recipes: Recipe[] = [
     rating: 4.8,
     ratingCount: 176,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-07-22",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["High Protein", "Meal Prep", "Gluten Free", "Weight Loss"],
     description: "A nutrient-dense power bowl with grilled chicken, roasted sweet potato, quinoa, avocado, and a tahini drizzle.",
     ingredients: [
@@ -421,7 +430,8 @@ export const recipes: Recipe[] = [
     rating: 4.5,
     ratingCount: 94,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-06-10",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["Gluten Free", "Weight Loss", "Low Calorie"],
     description: "Thick cauliflower steaks marinated in vibrant tandoori spices and roasted until charred and tender.",
     ingredients: [
@@ -488,7 +498,8 @@ export const recipes: Recipe[] = [
     rating: 4.7,
     ratingCount: 156,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-05-30",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["High Protein", "Quick", "No Cook", "Diabetic Friendly"],
     description: "Layers of thick Greek yogurt, fresh mixed berries, crunchy granola, and a drizzle of honey — ready in 10 minutes.",
     ingredients: [
@@ -554,7 +565,8 @@ export const recipes: Recipe[] = [
     rating: 4.6,
     ratingCount: 113,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-04-18",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["High Protein", "Fusion", "Family Friendly"],
     description: "Indian-spiced turkey keema fills corn tortillas for a delicious East-meets-West weeknight dinner the whole family will love.",
     ingredients: [
@@ -622,7 +634,8 @@ export const recipes: Recipe[] = [
     rating: 4.5,
     ratingCount: 78,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-03-10",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["Vegan", "Weight Loss", "Low Calorie", "Diabetic Friendly", "High Fiber"],
     description: "A light, healing yellow moong dal soup with ginger and turmeric — the ultimate comfort food for weight management.",
     ingredients: [
@@ -689,7 +702,8 @@ export const recipes: Recipe[] = [
     rating: 4.6,
     ratingCount: 104,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-02-28",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["High Protein", "Low Calorie", "Quick", "Weight Loss", "Keto"],
     description: "A protein-packed Indian scramble made with egg whites, tomatoes, onions, and fragrant spices.",
     ingredients: [
@@ -756,7 +770,8 @@ export const recipes: Recipe[] = [
     rating: 4.8,
     ratingCount: 198,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-01-15",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["Vegan", "Meal Prep", "High Fiber", "No Cook", "Diabetic Friendly"],
     description: "Creamy overnight chia pudding made with almond milk and topped with fresh mango and toasted coconut.",
     ingredients: [
@@ -823,7 +838,8 @@ export const recipes: Recipe[] = [
     rating: 4.9,
     ratingCount: 267,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-12-01",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["High Protein", "Gluten Free", "Vegetarian"],
     description: "Smoky, charred paneer tikka skewers with colorful bell peppers, marinated in a bold spiced yogurt coating.",
     ingredients: [
@@ -891,7 +907,8 @@ export const recipes: Recipe[] = [
     rating: 4.4,
     ratingCount: 67,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-11-20",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["Vegan", "Quick", "Fusion"],
     description: "A vibrant South Asian twist on classic avocado toast — creamy smashed avocado on toasted roti with chaat masala and pomegranate seeds.",
     ingredients: [
@@ -958,7 +975,8 @@ export const recipes: Recipe[] = [
     rating: 4.5,
     ratingCount: 89,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-10-05",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["Vegan", "Gluten Free", "Diabetic Friendly", "Weight Loss", "High Fiber"],
     description: "A modern protein-boosted take on the classic Indian comfort dish, using quinoa instead of rice for a complete amino acid profile.",
     ingredients: [
@@ -1025,7 +1043,8 @@ export const recipes: Recipe[] = [
     rating: 4.6,
     ratingCount: 142,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-09-12",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["Vegan", "High Fiber", "Weight Loss", "Family Friendly"],
     description: "Smoky roasted sweet potato and spiced black beans piled into warm corn tortillas with avocado crema.",
     ingredients: [
@@ -1093,7 +1112,8 @@ export const recipes: Recipe[] = [
     rating: 4.7,
     ratingCount: 189,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-08-08",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["High Protein", "Gluten Free", "Vegetarian"],
     description: "Creamy spinach curry with pan-seared golden paneer cubes — made lighter with reduced cream and extra spinach.",
     ingredients: [
@@ -1160,7 +1180,8 @@ export const recipes: Recipe[] = [
     rating: 4.3,
     ratingCount: 58,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-07-01",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["Vegan", "High Fiber", "Diabetic Friendly", "Weight Loss"],
     description: "Instant oat idli — a fiber-rich, no-fermentation version of the classic South Indian steamed cake, ready in under 30 minutes.",
     ingredients: [
@@ -1226,7 +1247,8 @@ export const recipes: Recipe[] = [
     rating: 4.7,
     ratingCount: 123,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-06-22",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["High Protein", "Weight Loss", "Gluten Free", "Keto"],
     description: "Juicy tikka-spiced grilled chicken strips over a crunchy salad of romaine, cucumber, and a tangy yogurt-mint dressing.",
     ingredients: [
@@ -1293,7 +1315,8 @@ export const recipes: Recipe[] = [
     rating: 4.6,
     ratingCount: 77,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-05-14",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["Vegan", "Gluten Free", "High Fiber", "Weight Loss"],
     description: "Roasted sweet potato cubes tossed with chaat masala, tamarind chutney, pomegranate, and fresh herbs — a festival of flavors.",
     ingredients: [
@@ -1360,7 +1383,8 @@ export const recipes: Recipe[] = [
     rating: 4.8,
     ratingCount: 312,
     author: { name: "SpiceFitKitchen Team" },
-    publishedDate: "2024-04-02",
+    publishedDate: "2026-08-27",
+    updatedDate: "2026-09-03",
     tags: ["High Protein", "Meal Prep", "No Cook", "Quick"],
     description: "Thick, creamy overnight oats packed with protein powder, Greek yogurt, and nut butter — the ultimate busy-morning breakfast.",
     ingredients: [

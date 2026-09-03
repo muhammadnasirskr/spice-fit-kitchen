@@ -294,6 +294,7 @@ async function collectPages() {
       author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
       publisher,
       datePublished: isoDate(r.publishedDate),
+      dateModified: isoDate(r.updatedDate || r.publishedDate),
       recipeCategory: r.mealType,
       recipeCuisine: r.category,
       keywords: (r.tags || []).join(", "),
