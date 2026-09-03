@@ -422,7 +422,7 @@ export const recipes: Recipe[] = [
     ratingCount: 94,
     author: { name: "SpiceFitKitchen Team" },
     publishedDate: "2024-06-10",
-    tags: ["Vegan", "Gluten Free", "Weight Loss", "Low Calorie"],
+    tags: ["Gluten Free", "Weight Loss", "Low Calorie"],
     description: "Thick cauliflower steaks marinated in vibrant tandoori spices and roasted until charred and tender.",
     ingredients: [
       { amount: "1", unit: "large", name: "Cauliflower head, sliced into steaks" },
@@ -440,6 +440,31 @@ export const recipes: Recipe[] = [
     tips: ["Use a cast iron pan for better char.", "For vegan version, use coconut yogurt."],
     faq: [{ question: "How do I slice cauliflower into steaks?", answer: "Cut from top to bottom in 1-inch thick slices, keeping the core intact." }],
     relatedRecipeIds: ["r1", "r4", "r13"],
+    intro:
+      "Cauliflower does something under high heat that few vegetables manage — the cut faces caramelise while the inside steams in its own moisture, so you get char and tenderness at once. That is what makes a tandoori marinade work on it. Be clear about what this is, though: at 9g of protein it is a vegetable dish, not a protein dish. It belongs beside something that brings protein, not instead of it.",
+    whyItWorks: [
+      "450°F, not lower. At moderate heat cauliflower goes soft and grey before it ever browns, and the char is the entire point of anything tandoori.",
+      "Thick slices cut down through the core hold together as steaks. Cut across the florets and you end up with a tray of loose pieces.",
+      "Yogurt in the marinade clings where oil would simply run off, so the spice sits on the surface where it can blacken.",
+      "Flipping halfway gives you two charred faces. Roast on one side only and the underside stays pale and steamed.",
+    ],
+    commonMistakes: [
+      "Cutting the steaks too thin. Under an inch and they fall apart the moment you try to flip them.",
+      "Crowding the tray. Cauliflower holds a lot of water, and pieces packed together steam each other into softness.",
+      "Under-salting the marinade. Cauliflower is bland on its own and needs more salt than you would expect.",
+      "Treating it as the protein of the meal. Nine grams will not keep you full — this sits next to dal, chicken or paneer, not in place of them.",
+    ],
+    substitutions: [
+      "A note on the vegan label: as written this uses dairy yogurt. Coconut or cashew yogurt behaves identically in the marinade and makes it properly vegan.",
+      "No tandoori masala? Garam masala with smoked paprika and a pinch of cayenne gets you most of the way there.",
+      "The same marinade works on thick slices of aubergine, or on paneer — the method is in [Paneer Tikka Skewers](/recipes/r12).",
+      "To make it a full meal, serve it with [Dal Tadka](/recipes/r4) or [Moong Dal Soup](/recipes/r9) for the protein it does not bring on its own.",
+    ],
+    storage: [
+      "Keeps 3 days, but the char softens overnight. Reheat in a hot oven rather than a microwave to bring some of it back.",
+      "If you are prepping ahead, roast the cauliflower plain and add the marinade before a final blast of high heat.",
+      "Do not freeze. Cauliflower turns watery and limp on thawing.",
+    ],
   },
   {
     id: "r7",
@@ -616,6 +641,31 @@ export const recipes: Recipe[] = [
     tips: ["Add spinach in the last 2 minutes for extra iron.", "Serve with a squeeze of lemon juice."],
     faq: [{ question: "Is this suitable for diabetics?", answer: "Yes, moong dal has a low glycemic index and is excellent for blood sugar management." }],
     relatedRecipeIds: ["r4", "r6", "r14"],
+    intro:
+      "This is what gets cooked in South Asian homes when somebody is ill, and there is a good reason for it: split moong is the most easily digested of all the dals, it needs no soaking, and it breaks down into something soft in twenty minutes. 195 calories, 13g of protein, and it is restorative in a way very few light meals manage.",
+    whyItWorks: [
+      "Split moong has no skin, which is why it cooks in twenty minutes without soaking and why it sits so lightly afterwards.",
+      "Rinsing until the water runs clear removes surface starch. Skip it and the soup turns cloudy and faintly gluey.",
+      "Ginger and turmeric go in at the start, with the dal, so their flavour runs through the whole pot instead of sitting on top of it.",
+      "The tempering goes on at the very end. Cumin bloomed in hot oil for twenty seconds carries an aroma that simmering can never produce.",
+    ],
+    commonMistakes: [
+      "Not cooking it long enough. It should break apart against the side of the pot — undercooked moong is chalky.",
+      "Salting very early. Salt slows the dal softening; add it once the lentils have already broken down.",
+      "Making it too thick. This is a soup, not a dal — it should be sippable from a mug.",
+      "Leaving out the lemon. Without acid it tastes flat, and one squeeze changes the entire bowl.",
+    ],
+    substitutions: [
+      "Vegetable broth instead of water adds depth for no meaningful calories.",
+      "A handful of spinach in the last two minutes brings iron and colour without changing the texture.",
+      "Red lentils (masoor) work and cook slightly faster, giving a thicker, sweeter soup.",
+      "Two skewers of [Paneer Tikka](/recipes/r12) alongside makes it a 495-calorie plate carrying 31g of protein — the pairing we recommend in our [high-protein Indian dinners](/blog/high-protein-indian-dinners-under-400-calories) guide.",
+    ],
+    storage: [
+      "Keeps 4 days and thickens considerably as it sits. Thin it with hot water when reheating.",
+      "Freezes well for 2 months. Make a fresh tempering after reheating — the original one loses its aroma completely.",
+      "A good candidate for a double batch. Once it is simmering it needs almost no attention.",
+    ],
   },
   {
     id: "r10",
@@ -995,6 +1045,31 @@ export const recipes: Recipe[] = [
     tips: ["Char the tortillas directly over a gas flame for authentic flavor.", "Add pickled red onions for brightness."],
     faq: [{ question: "How do I keep the tortillas warm?", answer: "Wrap them in a clean kitchen towel or foil after warming." }],
     relatedRecipeIds: ["r8", "r5", "r14"],
+    intro:
+      "Twelve grams of fibre a serving is the number that matters here, not the protein. That is close to half a day's worth, and it is why these fill you up far more than 360 calories usually would. Roasted sweet potato with black beans is one of those combinations that tastes considerably richer than its ingredient list suggests.",
+    whyItWorks: [
+      "425°F caramelises the edges of the sweet potato. Its sugars need real heat to brown, and that browning is where the smoky-sweet flavour comes from.",
+      "Smoked paprika does the job a grill or a chipotle would. On a sweet vegetable that smoke is what stops the whole thing tasting like dessert.",
+      "Avocado crema stands in for sour cream at almost the same texture, and brings unsaturated fat instead of saturated.",
+      "Lime juice in the crema is not optional — the acid cuts through both the sweet potato and the fat, and it keeps the crema green.",
+    ],
+    commonMistakes: [
+      "Dicing the sweet potato too large. Half-inch cubes roast through in twenty minutes; inch cubes are still hard in the middle.",
+      "Not draining and rinsing the beans. The canning liquid is starchy and salty and makes everything taste tinned.",
+      "Serving cold tortillas. Thirty seconds a side in a dry pan, or straight over a gas flame, and they become a completely different thing.",
+      "Forgetting to salt the crema. Avocado without salt tastes of very little.",
+    ],
+    substitutions: [
+      "Butternut squash or ordinary potato instead of sweet potato — both roast the same way. Squash is sweeter, potato is neutral.",
+      "Pinto or kidney beans work as well as black beans. Chickpeas change the texture more than the nutrition.",
+      "Greek yogurt with lime instead of avocado crema adds protein and cuts the fat, though it is no longer vegan.",
+      "For the meat version of the same format, [Turkey Keema Tacos](/recipes/r8) use the same tortillas and toppings at 32g of protein.",
+    ],
+    storage: [
+      "Roasted sweet potato and the beans keep 4 days separately and reheat well.",
+      "Avocado crema browns within a day even with lime in it. Make it fresh, or press cling film directly onto the surface.",
+      "Never store assembled tacos. Warm the components and build them at the table.",
+    ],
   },
   {
     id: "r16",
@@ -1237,6 +1312,31 @@ export const recipes: Recipe[] = [
     tips: ["Add a spoonful of plain yogurt for a creamy contrast.", "Best served warm immediately after roasting."],
     faq: [{ question: "Where do I find tamarind chutney?", answer: "Available at Indian grocery stores or online. You can also make it with tamarind paste and jaggery." }],
     relatedRecipeIds: ["r4", "r6", "r15"],
+    intro:
+      "Chaat is street food, and this is the home-oven version — roasted sweet potato instead of deep-fried potato, but the same collision of hot, sour, sweet and crunchy that makes chaat what it is. Two honest numbers before you start: 5g of protein and 18g of sugar, most of it from the sweet potato itself and the tamarind chutney. This is a snack or a side, not a meal.",
+    whyItWorks: [
+      "The chaat masala goes on while the sweet potato is still hot. Residual heat blooms it and helps it stick; sprinkled over cold cubes it just sits on the surface.",
+      "Roasting instead of frying keeps this under 250 calories, and sweet potato browns well enough at 425°F that you do not miss the oil.",
+      "Chaat masala carries black salt (kala namak), which brings a sulphurous, savoury edge that plain salt and lemon cannot replicate.",
+      "Pomegranate and cilantro are not garnish. Chaat needs something sharp, cold and crunchy against the soft hot base — leave them out and it is only spiced sweet potato.",
+    ],
+    commonMistakes: [
+      "Assembling it early. Everything goes limp within about fifteen minutes. Chaat is built and eaten immediately, always.",
+      "Over-roasting until the cubes are soft all the way through. You want firm edges that stand up to the chutney.",
+      "Too much tamarind chutney. It is sweet as well as sour — a tablespoon a serving is plenty, and more pushes the sugar higher still.",
+      "Skipping salt because the chaat masala already has some. It rarely carries enough on its own.",
+    ],
+    substitutions: [
+      "Ordinary potato, or a mix of both, is closer to street-style chaat and drops the sugar considerably.",
+      "A spoonful of plain yogurt adds creaminess and about 5g of protein — the easiest way to make this a more balanced plate.",
+      "No tamarind chutney? Lemon juice with a little date syrup or jaggery gets you the same sweet-sour balance.",
+      "To turn it into a proper meal, serve it beside [Quinoa Khichdi](/recipes/r14) or a bowl of [Moong Dal Soup](/recipes/r9).",
+    ],
+    storage: [
+      "Roasted sweet potato keeps 3 days on its own and can be re-crisped in a hot oven.",
+      "Assembled chaat does not keep at all. Do not try.",
+      "Chaat masala loses its potency after about six months in an opened jar. If yours tastes dull, that is usually why.",
+    ],
   },
   {
     id: "r20",
@@ -1279,5 +1379,30 @@ export const recipes: Recipe[] = [
     tips: ["Batch prep 5 jars on Sunday for the week.", "Add a mashed banana to naturally sweeten without sugar."],
     faq: [{ question: "What protein powder should I use?", answer: "A clean whey or plant-based vanilla protein powder works best." }],
     relatedRecipeIds: ["r7", "r11", "r3"],
+    intro:
+      "Twenty-eight grams of protein for 370 calories, and the work is five minutes with a jar and a spoon. As with the chia pudding, that five-minute figure counts the mixing and not the waiting — this needs at least six hours in the fridge, so it is a tonight job for tomorrow morning. Batch five jars on a Sunday and the week is handled.",
+    whyItWorks: [
+      "Rolled oats soften in cold liquid overnight through plain hydration — no heat involved, and the texture stays chewy rather than gluey.",
+      "Greek yogurt and protein powder split the work between them: the yogurt brings around 10g and the scoop most of the rest.",
+      "Almond butter is not only flavour. Fat slows digestion, and that is a large part of why this holds you past mid-morning.",
+      "Half a cup of oats to a full cup of combined liquid is the ratio that gives a thick, spoonable result instead of soup.",
+    ],
+    commonMistakes: [
+      "Using instant or steel-cut oats. Instant collapses into sludge; steel-cut never softens properly without being cooked.",
+      "Not mixing the protein powder in thoroughly at the start. Lumps do not dissolve overnight — they simply sit there until morning.",
+      "Eating it after two hours. It will be gritty. Six hours is the genuine minimum.",
+      "Adding fruit at the start. Banana especially goes brown and slimy — top it in the morning instead.",
+    ],
+    substitutions: [
+      "Skip the protein powder and add another quarter cup of Greek yogurt: you land around 20g instead of 28g.",
+      "Any milk works. Dairy milk pushes the protein slightly higher than almond does.",
+      "Peanut butter, cashew butter or tahini all stand in for almond butter at similar calories.",
+      "A mashed ripe banana stirred in sweetens it with no added sugar, for about 105 calories.",
+    ],
+    storage: [
+      "Keeps 5 days in the fridge, which is exactly what makes it the best batch-prep breakfast on the site.",
+      "It thickens each day. Loosen a later jar with a splash of milk.",
+      "Eat it cold or warm it for a minute. Warmed it becomes something closer to porridge, which some people prefer.",
+    ],
   },
 ];
