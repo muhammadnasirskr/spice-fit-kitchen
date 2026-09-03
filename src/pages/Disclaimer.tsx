@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { Seo } from "@/components/Seo";
 
 export default function Disclaimer() {
@@ -51,7 +52,7 @@ export default function Disclaimer() {
         <p>
           This website displays advertising from third-party networks such as
           Google AdSense. Please see our{" "}
-          <a href="/privacy-policy">Privacy Policy</a> for details on how
+          <Link href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</Link> for details on how
           advertising cookies are used.
         </p>
 

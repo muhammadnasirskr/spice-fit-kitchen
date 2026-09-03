@@ -1,8 +1,9 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { motion } from "framer-motion";
 import { Leaf } from "lucide-react";
+import { SiPinterest } from "react-icons/si";
+import { PINTEREST_URL } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -65,19 +66,18 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Newsletter */}
+            {/* Was an email signup form with nothing behind it — the Join button
+                did not store the address anywhere. Replaced with the one channel
+                that is actually live. */}
             <div className="bg-white/10 backdrop-blur-md border border-white/20 p-5 rounded-2xl w-full max-w-md">
               <p className="text-sm font-medium mb-3 text-gray-200">
-                Get weekly healthy recipes — free, straight to your inbox
+                New recipes every week — see them first on Pinterest
               </p>
-              <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="bg-white/90 text-black border-none h-11 placeholder:text-gray-500 flex-1 rounded-xl"
-                />
-                <Button className="h-11 px-5 rounded-xl font-semibold">Join</Button>
-              </form>
+              <Button asChild className="h-11 px-5 rounded-xl font-semibold w-full sm:w-auto">
+                <a href={PINTEREST_URL} target="_blank" rel="noopener noreferrer">
+                  <SiPinterest className="w-4 h-4 mr-2" /> Follow on Pinterest
+                </a>
+              </Button>
             </div>
 
             {/* Value line */}

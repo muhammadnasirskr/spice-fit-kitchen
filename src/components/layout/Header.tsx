@@ -1,5 +1,7 @@
 import { Link } from "wouter";
 import { Search, Menu, X, Moon, Sun } from "lucide-react";
+import { SiPinterest } from "react-icons/si";
+import { PINTEREST_URL } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { useTheme } from "@/components/theme-provider";
@@ -82,8 +84,13 @@ export function Header() {
           >
             {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
           </Button>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-            Subscribe
+          {/* Was a dead "Subscribe" button (no handler, no email backend).
+              Pinterest is the one channel that actually exists today. */}
+          <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <a href={PINTEREST_URL} target="_blank" rel="noopener noreferrer">
+              <SiPinterest className="w-4 h-4 mr-2" />
+              Follow
+            </a>
           </Button>
         </div>
 
@@ -132,7 +139,11 @@ export function Header() {
                 <Search className="w-4 h-4 mr-2" /> Search
               </Link>
             </Button>
-            <Button>Subscribe</Button>
+            <Button asChild>
+              <a href={PINTEREST_URL} target="_blank" rel="noopener noreferrer">
+                <SiPinterest className="w-4 h-4 mr-2" /> Follow
+              </a>
+            </Button>
           </div>
         </div>
       )}

@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { Seo } from "@/components/Seo";
 
 export default function Terms() {
@@ -48,7 +49,7 @@ export default function Terms() {
           The nutritional and health information on this site is provided for
           general purposes only and is not a substitute for professional medical
           advice. Please see our{" "}
-          <a href="/disclaimer">Disclaimer</a> for more details.
+          <Link href="/disclaimer" className="text-primary hover:underline">Disclaimer</Link> for more details.
         </p>
 
         <h2>6. Limitation of Liability</h2>

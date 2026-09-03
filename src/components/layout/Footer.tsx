@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Leaf } from "lucide-react";
-import { SiPinterest, SiFacebook, SiInstagram, SiYoutube, SiTiktok, SiX } from "react-icons/si";
-import { Input } from "@/components/ui/input";
+import { SiPinterest } from "react-icons/si";
+import { PINTEREST_URL } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -48,22 +48,27 @@ export function Footer() {
 
           {/* Column 4: Newsletter & Social */}
           <div className="flex flex-col gap-6">
+            {/* This used to be an email signup form that went nowhere, next to a
+                promise of a "free healthy eating eBook" that does not exist.
+                Both removed. Bring the form back only with a real email service
+                behind it. */}
             <div>
               <h3 className="font-bold text-lg mb-4 font-heading">Stay Inspired</h3>
-              <p className="text-sm text-muted-foreground mb-4">Get our latest recipes and a free healthy eating eBook.</p>
-              <form className="flex flex-col gap-2" onSubmit={(e) => e.preventDefault()}>
-                <Input placeholder="Email address" type="email" required className="bg-background" />
-                <Button className="w-full">Subscribe</Button>
-              </form>
+              <p className="text-sm text-muted-foreground mb-4">
+                We publish new recipes and cooking guides every week. Follow along on Pinterest
+                to see them first.
+              </p>
+              <Button asChild className="w-full">
+                <a href={PINTEREST_URL} target="_blank" rel="noopener noreferrer">
+                  <SiPinterest className="w-4 h-4 mr-2" /> Follow on Pinterest
+                </a>
+              </Button>
             </div>
-            <div className="flex items-center gap-4">
-              <a href="#" className="text-muted-foreground hover:text-[#E60023] transition-colors" aria-label="Pinterest"><SiPinterest className="w-5 h-5" /></a>
-              <a href="#" className="text-muted-foreground hover:text-[#E1306C] transition-colors" aria-label="Instagram"><SiInstagram className="w-5 h-5" /></a>
-              <a href="#" className="text-muted-foreground hover:text-[#1877F2] transition-colors" aria-label="Facebook"><SiFacebook className="w-5 h-5" /></a>
-              <a href="#" className="text-muted-foreground hover:text-[#FF0000] transition-colors" aria-label="YouTube"><SiYoutube className="w-5 h-5" /></a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="TikTok"><SiTiktok className="w-5 h-5" /></a>
-              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors" aria-label="X (Twitter)"><SiX className="w-5 h-5" /></a>
-            </div>
+            {/* The social icon row lived here: six icons, all href="#", none of
+                which went anywhere. Pinterest is the only live profile and it
+                already has the button above, so a separate row of one icon is
+                just noise. Bring the row back when there are 2+ real profiles —
+                put their URLs in src/lib/site.ts. */}
           </div>
         </div>
         
