@@ -236,6 +236,31 @@ export const recipes: Recipe[] = [
     tips: ["Add roasted peanuts on top for extra protein and crunch."],
     faq: [{ question: "Can I use steel-cut oats?", answer: "Yes, add 10 more minutes to the cooking time." }],
     relatedRecipeIds: ["r4", "r7", "r11"],
+    intro:
+      "If sweet breakfast has never worked for you, this is the answer — oats cooked like upma, with cumin, turmeric and vegetables instead of milk and sugar. It tastes nothing like porridge. At 220 calories it is one of the lightest breakfasts here, and 8g of protein is the honest weak point, which the swaps below fix for about 100 calories.",
+    whyItWorks: [
+      "Cumin seeds are bloomed in oil before anything else goes in. Whole spice in hot fat is the entire flavour base — cumin powder stirred in later tastes dusty next to it.",
+      "The vegetables are sautéed before the oats, so they keep some bite. Added with the water they simply boil into softness.",
+      "Rolled oats, not instant. Rolled oats hold their shape and give a texture close to upma; instant oats dissolve into paste.",
+      "You cook until the water is fully absorbed rather than topping it up. Masala oats should be fluffy and separate, not soupy.",
+    ],
+    commonMistakes: [
+      "Using instant oats. They break down in about ninety seconds and there is no recovering the texture afterwards.",
+      "Too much water. Start with 1 cup for 1/2 cup of oats and add a splash more only if it looks dry — you cannot take water back out.",
+      "Under-salting. Savoury oats need noticeably more salt than sweet ones and it is easy to forget that.",
+      "Stirring constantly. That releases starch and turns the whole thing gluey. Stir once when the water goes in, then leave it alone.",
+    ],
+    substitutions: [
+      "Steel-cut oats work but need about 10 extra minutes and a little more water.",
+      "Any vegetables you have — peas, carrots, corn, beans, spinach. Frozen mixed vegetables are genuinely fine here.",
+      "A handful of roasted peanuts on top adds roughly 7g of protein and the crunch the dish is missing. This is the single best change you can make to it.",
+      "For a savoury breakfast that is high in protein without needing a fix, [Egg White Masala Bhurji](/recipes/r10) gives you 22g at 175 calories.",
+    ],
+    storage: [
+      "Best fresh. Oats set firm within about twenty minutes of cooling.",
+      "It keeps 2 days in the fridge, but you will need to break it up with a splash of hot water when reheating.",
+      "Chop the vegetables the night before and this becomes a genuine ten-minute breakfast. Do not pre-cook the oats themselves.",
+    ],
   },
   {
     id: "r4",
@@ -456,6 +481,31 @@ export const recipes: Recipe[] = [
     tips: ["Use frozen berries in the off-season — they're just as nutritious.", "Prep the night before for a grab-and-go breakfast."],
     faq: [{ question: "What granola should I use?", answer: "Choose a low-sugar granola with at least 3g fiber per serving." }],
     relatedRecipeIds: ["r3", "r11", "r17"],
+    intro:
+      "Twenty grams of protein for 290 calories with no cooking at all, which is a genuinely good ratio for something you can build in ten minutes. One honest note before you start: the sugar comes in at 20g. Almost all of it is from the berries and the granola rather than added sugar, but it is a real number and worth knowing if you are watching it.",
+    whyItWorks: [
+      "Plain Greek yogurt, not flavoured. Flavoured pots routinely carry 15 to 20g of added sugar each, which would roughly double the sugar here for no extra protein.",
+      "Layering instead of mixing keeps the granola crisp. Stirred through, it goes soft within a couple of minutes.",
+      "Berries bring their sweetness with fibre attached, which is why this keeps you full despite being mostly yogurt.",
+      "The honey goes on last, on top. A teaspoon drizzled where you taste it first does more work than a tablespoon stirred through.",
+    ],
+    commonMistakes: [
+      "A heavy hand with the granola. A generous handful is easily 120 extra calories — measure the quarter cup at least once so you know what it actually looks like.",
+      "Buying granola without reading the label. Many are essentially dessert; look for at least 3g of fibre a serving and a short ingredient list.",
+      "Assembling hours ahead with the granola already in. If you are prepping the night before, keep the granola in a separate pot and add it in the morning.",
+      "Switching to low-fat yogurt to save calories. The saving is small and the texture is noticeably thinner — the fat is not the problem here.",
+    ],
+    substitutions: [
+      "Frozen berries are just as nutritious and much cheaper out of season. Thaw them first or they water down the yogurt.",
+      "Skyr or strained labneh instead of Greek yogurt takes the protein past 25g.",
+      "Maple syrup, date syrup, or nothing at all in place of the honey — with ripe berries you often do not need any.",
+      "Swap the granola for chopped nuts and you lose most of the sugar and gain healthy fat, at similar calories.",
+    ],
+    storage: [
+      "Yogurt and berries can be layered the night before and keep 2 days. Granola goes on in the morning, never before.",
+      "Do not freeze it. Yogurt separates and comes back grainy.",
+      "For a make-ahead version that genuinely survives five days, see [Chia Seed Pudding](/recipes/r11) or [High Protein Overnight Oats](/recipes/r20).",
+    ],
   },
   {
     id: "r8",
@@ -675,6 +725,31 @@ export const recipes: Recipe[] = [
     tips: ["Prepare 5 jars on Sunday for the whole week.", "Add collagen powder for extra protein."],
     faq: [{ question: "How long will it keep?", answer: "Chia pudding keeps in the fridge for up to 5 days." }],
     relatedRecipeIds: ["r7", "r3", "r20"],
+    intro:
+      "Five minutes of actual work, then four hours of doing nothing while the chia seeds absorb the milk and set. That waiting time is the part most recipes gloss over — including our own time field above, which counts the mixing and not the setting. Make it tonight, eat it tomorrow. And the real headline here is not the protein: it is 12g of fibre a serving.",
+    whyItWorks: [
+      "Chia seeds absorb roughly ten times their weight in liquid and form a gel around themselves. That gel, not any added thickener, is what turns milk into pudding.",
+      "Three tablespoons to one cup of milk is the ratio that sets firm without going rubbery. Less and it stays runny; more and it sets stiff.",
+      "Whisking rather than stirring stops the seeds clumping. Clumps never hydrate properly and stay crunchy in the middle.",
+      "A second stir after ten minutes catches the seeds that have sunk. That is the difference between an even pudding and a solid layer sitting under thin milk.",
+    ],
+    commonMistakes: [
+      "Only stirring once. Come back after ten minutes, stir again, then refrigerate — otherwise you get a sediment layer at the bottom.",
+      "Eating it after an hour. It will be edible but grainy. Four hours is the minimum and overnight is better.",
+      "Using sweetened plant milk without adjusting. Many vanilla almond milks already carry 12g of sugar a cup, before the maple syrup goes in.",
+      "Assuming the calories are low because the portion looks small. Chia brings 10g of fat a serving — good fat, but it still counts.",
+    ],
+    substitutions: [
+      "Any milk works. Dairy milk raises the protein by roughly 8g a serving.",
+      "A scoop of protein powder or collagen whisked in at the start takes it past 20g of protein without changing the texture. This is the fix for its one real weakness.",
+      "Mango can be any fruit — berries, banana and stewed apple all work. Softer fruit sits better than crisp.",
+      "Skip the maple syrup entirely if the fruit is ripe. Most of the sweetness is already there.",
+    ],
+    storage: [
+      "Keeps 5 days in the fridge, which makes it one of the best batch-prep breakfasts on the site. Five jars on a Sunday covers the week.",
+      "Add the fruit on the morning you eat it, not at the start — it softens and bleeds colour into the pudding.",
+      "Do not freeze. The gel breaks and it thaws watery.",
+    ],
   },
   {
     id: "r12",
@@ -785,6 +860,31 @@ export const recipes: Recipe[] = [
     tips: ["Add a fried egg on top for extra protein.", "Use a multi-grain roti for more fiber."],
     faq: [{ question: "Can I use naan instead?", answer: "Yes, naan works well — choose whole wheat naan for more fiber." }],
     relatedRecipeIds: ["r3", "r7", "r11"],
+    intro:
+      "Avocado toast, except the bread is a toasted whole wheat roti and the seasoning is chaat masala and pomegranate. It sounds like a gimmick and it is not — roti crisps thinner and lighter than sourdough, and chaat masala does what flaky salt and chilli usually do, only with more going on. Nine grams of protein is the weak point, and a fried egg on top fixes it.",
+    whyItWorks: [
+      "Toasting the roti in a dry pan until it genuinely crisps is the whole dish. A warm, soft roti under mashed avocado is just a wrap you forgot to fold.",
+      "The lemon juice is not only flavour — the acid slows the avocado browning, which matters if you are making more than one.",
+      "Chaat masala carries black salt and amchur, so it brings salt, sourness and a faint sulphurous note all at once. Plain salt cannot do that.",
+      "Pomegranate seeds give sharp bursts of sweetness against the fat of the avocado, and that contrast is what stops it tasting heavy.",
+    ],
+    commonMistakes: [
+      "Mashing the avocado completely smooth. Leave some texture, or it spreads like paste and eats like it too.",
+      "Using an under-ripe avocado. It will not mash, it will not taste of much, and no amount of lemon rescues it.",
+      "Toasting the roti in oil. It does not need any — a dry pan crisps it better and saves about 40 calories.",
+      "Assembling it early. A topped roti goes soft within minutes, so build it immediately before eating.",
+    ],
+    substitutions: [
+      "Whole wheat naan works, though it is heavier and adds calories. Ordinary toast works too, at which point it is just avocado toast.",
+      "A fried or poached egg on top adds about 6g of protein and 70 calories, and it belongs there.",
+      "No pomegranate? Finely diced tomato and red onion give you the same sharp contrast.",
+      "No chaat masala? Lemon, salt and a pinch of cumin get you most of the way, though not all of it.",
+    ],
+    storage: [
+      "None, honestly. This is an assemble-and-eat dish — mashed avocado browns within the hour and toasted roti softens faster than that.",
+      "You can toast the rotis ahead and keep them airtight for a day, then mash the avocado fresh.",
+      "Leftover mashed avocado: press cling film directly onto the surface so no air reaches it. That buys you a day, not more.",
+    ],
   },
   {
     id: "r14",
@@ -1003,6 +1103,31 @@ export const recipes: Recipe[] = [
     tips: ["Serve with coconut chutney and sambar for a complete meal.", "Add grated carrot to the batter for extra nutrition."],
     faq: [{ question: "What is Eno fruit salt?", answer: "Eno is a common antacid used as a leavening agent in Indian cooking, available at Indian grocery stores." }],
     relatedRecipeIds: ["r3", "r13", "r11"],
+    intro:
+      "Traditional idli batter needs soaking, grinding and a full day of fermentation. This one skips all of it — powdered oats, semolina and yogurt rested for five minutes, with eno doing the lifting that fermentation normally does. It is not the same thing as a properly fermented idli and it is not pretending to be. It is the version you can actually make on a weekday.",
+    whyItWorks: [
+      "Eno is a leavening agent that reacts the instant it meets moisture, which is why it can stand in for fermentation here. It is also exactly why you cannot add it early.",
+      "The yogurt gives the eno the acid it needs to react with, and it adds back the faint sourness fermented batter would have brought.",
+      "Resting the batter five minutes lets the semolina absorb liquid and swell. Skip that and the idlis come out dense.",
+      "Steaming rather than baking keeps them light and moist. There is no substitute for this step — it is what makes an idli an idli.",
+    ],
+    commonMistakes: [
+      "Adding the eno early. It fizzes, does its work and goes flat within a couple of minutes. It goes in immediately before the batter hits the mould, and then you steam straight away.",
+      "Over-mixing after the eno. Stir just enough to combine — every extra stir knocks the air back out.",
+      "Batter too thick. It should be thick but pourable. Too stiff and the idlis are heavy; too thin and they will not hold their shape.",
+      "Not greasing the moulds. Oat idli sticks noticeably more than rice idli does.",
+    ],
+    substitutions: [
+      "Fine semolina (rava) is what gives the structure — do not leave it out entirely or you will end up with an oat pancake.",
+      "Grated carrot, peas or chopped coriander in the batter add nutrition and colour for almost no calories.",
+      "Baking soda with a squeeze of lemon works if you cannot find eno, though the rise is less reliable.",
+      "Serve it with sambar rather than plain — the dal in sambar is where the missing protein comes from. A bowl of [Moong Dal Soup](/recipes/r9) alongside does the same job.",
+    ],
+    storage: [
+      "Keeps 2 days in the fridge. Re-steam for 3 to 4 minutes to bring them back; a microwave makes them rubbery.",
+      "Do not store the batter. Once the eno is in it is a one-way reaction — mix a fresh batch instead.",
+      "Cooked idlis freeze for a month. Steam them straight from frozen for about 6 minutes.",
+    ],
   },
   {
     id: "r18",
